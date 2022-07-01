@@ -23,12 +23,13 @@ public class Nim
       if(stones <= 0)
       {
         System.out.println("You win!");
+        break; //force out loop
       }
       
        //machine turn
       System.out.println("Computer's Turn:");
       stonesTaken = (int) (Math.random()*3)+1;
-      //Math.random()(max - min +1) +min this calculates range
+      //Math.random()(min - max +1) +min this calculates range, keeps in mind the zero index
       stones = stones - stonesTaken;
       System.out.println("The Computer took " + stonesTaken);
       //calculate number of stones remaining, print
@@ -36,6 +37,7 @@ public class Nim
       if(stones <= 0)
       {
         System.out.println("Computer Wins!");
+        break; //force out loop
       }
 
      
@@ -45,6 +47,6 @@ public class Nim
        
       
     }
-    
+    System.out.println("The game has ended");
   }
 }
