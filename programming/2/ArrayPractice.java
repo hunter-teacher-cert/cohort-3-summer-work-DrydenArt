@@ -61,18 +61,17 @@ public class ArrayPractice
   */
   public static int[] buildIncreasingArray( int size, int startValue, int step )
   {
-    int[] data = new int[size];
-    data[0] = startValue;
+    int[] data = new int[size]; //the array holds five elements
+    data[0] = startValue; //index zero will be filled with the indicated startValue (element 3)
+    // the for loop will pass through each element of the array 
     for(int i = 1; i < size; i++){
+      //checks each number one at a time, while i is < size of the array (5), go to the next index  
         data[i] = data[i-1] + step;
+      //once looped through, add the step increase until you are one less(index) than the size of the array (5).
     }
-    // loop through each element of the array and
-    /* YOUR BRILLIANT CODE HERE */
+    // assign the appropriate value to each one in main.
 
-    // assign the appropriate value to each one.
-    /* YOUR BRILLIANT CODE HERE */
-
-    return data;
+    return data; //the output will be returned from the array to the main for printout
   }
 
 
