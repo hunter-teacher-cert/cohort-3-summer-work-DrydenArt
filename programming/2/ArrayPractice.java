@@ -241,8 +241,9 @@ public class ArrayPractice
      If the input array contains 5,8,13,7,27,2
      After the routine, the array will contain 2,27,7,13,8,5
   */
-  public static void flip( int[] data )
+  public static void flip( int[] data )//as demonstrated by Will Lamorie
   {
+    int[] intermi
     /* YOUR BRILLIANT CODE HERE */
   }
 
