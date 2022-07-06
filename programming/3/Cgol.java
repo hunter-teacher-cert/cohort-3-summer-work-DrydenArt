@@ -1,10 +1,12 @@
 import java.io.*;
 import java.util.*;
 
+
+
 /**
  * Conway's Game of Life by Team AreWeSentientYet?
  * Elizabeth Rechtin
- * collaborators: Will LaMorie, Rich Parker, Marisa Shuman
+ * collaborators: Susie Seccafico, Rich Parker, Steve Sabaugh
  */
 
 /**
@@ -23,8 +25,27 @@ import java.util.*;
    NOTA BENE:  All births and deaths occur simultaneously. Together, they constitute a single generation.
 */
 
+//char alive == "X";
+// int dead == 0 ; 
+// if (board[i][j] == alive)
+//     return alive;
+//   else
+//     return dead; -- maybe we dont need this?
+
+//getNeighbors..
+// int neighbors ==0
+// final char alive =="X";
+// final int dead == 0;
+// for (int i = r - 1; i<= r +1; i++)
+//    for (int j = c-1; i<=c+1; j++)
+ //  if(board[i][j] == alive && (r != i || c !=j))
+//      neighbors +=1;
+
+
+
 public class Cgol
 {
+  
 
   //create, initialize, and return  empty board (all cells dead)
   public static char[][] createNewBoard( int rows, int cols )
@@ -35,7 +56,16 @@ public class Cgol
 
   //print the board to the terminal
   public static void printBoard( char[][] board )
-  {
+  {//int numRows = board.length;
+    //int numCols = board[0].length;
+    for (int i = 0; i < board.length; i++)
+      {
+        for (int j = 0; j < board[i].length; j++)
+          {
+            System.out.print(board[i][j] + " ");
+          }
+      System.out.println("");//do we want to add a visual aspect to see the grid?  as in Mr. Ahmed's demo?
+      }
 
   }
 
@@ -43,14 +73,28 @@ public class Cgol
   //set cell (r,c) to val
   public static void setCell( char[][] board, int r, int c, char val )
   {
-//maybe this can use Math.random?
+        board[r][c]=val;
   }
 
 
+    
   //return number of living neigbours of board[r][c]
   public static int countNeighbours( char[][] board, int r, int c )
   {
+    int living = 0;
 
+    for(int row = 0;row < board.length;i++){
+      for(int col = 0;col < board[i].length;j++){
+        for(int i = -1;i < 2;i++){
+          for(int j = -1;j < 2;j++){
+            if((row + i >= 0 && row + i < r) && (col + j >= 0 && col + j < c)){
+              living += board[row + i][col + j];
+            }
+          }
+          
+        }
+        living -= board[row][col];
+//maybe create a copy of the board to hold information temporarily? Maybe this array could hold whether the current generation status will live or die
   }
 
 
