@@ -25,28 +25,12 @@ import java.util.*;
    NOTA BENE:  All births and deaths occur simultaneously. Together, they constitute a single generation.
 */
 
-//char alive == "X";
-// int dead == 0 ; 
-// if (board[i][j] == alive)
-//     return alive;
-//   else
-//     return dead; -- maybe we dont need this?
-
-//getNeighbors..
-// int neighbors ==0
-// final char alive =="X";
-// final int dead == 0;
-// for (int i = r - 1; i<= r +1; i++)
-//    for (int j = c-1; i<=c+1; j++)
- //  if(board[i][j] == alive && (r != i || c !=j))
-//      neighbors +=1;
-
 
 
 public class Cgol
 {
-  //final char alive = 'X';
-  //final char dead = '-';
+  static char dead ='-';
+  static char alive = 'X';
 
   //create, initialize, and return  empty board (all cells dead)
   public static char[][] createNewBoard( int rows, int cols )
@@ -89,24 +73,26 @@ public class Cgol
   //return number of living neigbours of board[r][c]
   public static int countNeighbours( char[][] board, int r, int c )
   {
+
+    int startR = (r - 1 < 0) ? r : r - 1;
+    int startC = (c - 1 < 0) ? c : c - 1;
+    int rowLim = (r + 1 > board.length - 1) ? r + 1 : r + 2;  
+    int colLim = (c + 1 > board[0].length - 1) ? c + 1 :  c + 2;
+
     int livingCt = 0;
     
-    for(int i = -1;i < 2;i++)
-    { //looks at every neighbor of that cell in the row
-      for(int j = -1;j < 2;j++)
-      { //looks at every neighbor of that cell in the col
-          if((r + i >= 0 && r + i < r) && (c + j >=0 && c + j < c))
-          {
-            if(board[i][j] == 'X')
-            {
-              livingCt++; //goes up by 1 to continue counting our living neighbors
-            }
-              
+    for(int row = startR; row < rowLim;row++)
+    {
+      for(int col = startC;col < colLim;col++) 
+      {
+        if (!(row == r && col == c)) //checks to make sure it's not in the square
+        {
+          if(board[row][col] == 'X'){
+            livingCt++; //goes up by 1 to continue counting our living neighbors
           }
-      }
-          
+        }
+      }  
     }
-        
     return livingCt;
   }
 //maybe create a copy of the board to hold information temporarily? Maybe this array could hold whether the current generation status will live or die  
@@ -119,26 +105,45 @@ public class Cgol
   */
  public static char getNextGenCell( char[][] board,int r, int c )
   {
-// if (living)
- //   if (lives == 2 || lives == 3)
-//    board[i][j] =
-// else
-//   if(lives ==3)
-//     board[i][j]=
+    char nextGen = board[r][c];
+    int numNeighbours = countNeighbours(board,r,c);
+    if(board[r][c]== alive){
+      if(numNeighbours == 2 || numNeighbours ==3){// alive cell
+        nextGen = alive;
+    }
+      else{
+        nextGen = dead;
+    }
+    }
+    else{// dead cell
+      if (numNeighbours ==3){
+        nextGen = alive;
+    }
+    else{
+      nextGen = dead;
+    }
+  }
+    return nextGen;
   }
 
 
-  generate and return a new board representing next generation
-  public static char[][] generateNextBoard( char[][] board )
+  // generate and return a new board representing next generation
+public static char[][] generateNextBoard( char[][] board )
   {
-
-    
-}
+    char [][] newBoard = new char[board.length][board[0].length];
+    for (int i =0; i<board.length; i++){
+      for(int j=0; j<board[0].length; j++){
+        newBoard[i][j] = getNextGenCell(board,i,j );
+      }
+    }
+    return newBoard;
+  }
 
 
 
   public static void main( String[] args )
   {
+
     char[][] board;
     board = createNewBoard(5,5);
     // final char alive = 'X';
@@ -147,7 +152,16 @@ public class Cgol
     setCell(board, 0, 0, 'X');
     setCell(board, 0, 1, 'X');
     setCell(board, 1, 0, 'X');
+    setCell(board, 3, 2, 'X');
+    setCell(board, 3, 3, 'X');
+    setCell(board, 3, 4, 'X');
     printBoard(board);
+    System.out.println("The cell is alive");
+    System.out.println(countNeighbours(board, 0, 0));
+    System.out.println("New Board:");
+    char [][] newBoard;
+    newBoard = generateNextBoard(board);
+    printBoard(newBoard);
     /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     char[][] board;
     board = createNewBoard(25,25);
