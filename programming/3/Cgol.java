@@ -73,8 +73,10 @@ public class Cgol
   //return number of living neigbours of board[r][c]
   public static int countNeighbours( char[][] board, int r, int c )
   {
-
-    int startR = (r - 1 < 0) ? r : r - 1;
+    //sets all conditions for anything out of bounds
+    //start of rows ? is a ternary operator = choice of two (an in line statement)
+    //if r-1 < 0) then startR = r : (else) startR = r-1
+    int startR = (r - 1 < 0) ? r : r - 1; 
     int startC = (c - 1 < 0) ? c : c - 1;
     int rowLim = (r + 1 > board.length - 1) ? r + 1 : r + 2;  
     int colLim = (c + 1 > board[0].length - 1) ? c + 1 :  c + 2;
@@ -144,24 +146,21 @@ public static char[][] generateNextBoard( char[][] board )
   public static void main( String[] args )
   {
 
-    char[][] board;
-    board = createNewBoard(5,5);
-    // final char alive = 'X';
-    // final char dead = '-';
-    //breathe life into some cells:
-    setCell(board, 0, 0, 'X');
+    char[][] board; //declares the board array
+    board = createNewBoard(5,5); //initializes the array (with new)
+    setCell(board, 0, 0, 'X'); //indicates each cell
     setCell(board, 0, 1, 'X');
     setCell(board, 1, 0, 'X');
     setCell(board, 3, 2, 'X');
     setCell(board, 3, 3, 'X');
     setCell(board, 3, 4, 'X');
     setCell(board, 4, 0, 'X');
-    printBoard(board);
-    System.out.println("--------------------------\n\n");
-    System.out.println("New Board:");
-    char [][] newBoard;
-    newBoard = generateNextBoard(board);
-    printBoard(newBoard);
+    printBoard(board); //calls printBoard with the argument board
+    System.out.println("--------------------------\n\n");//divides the boards up 
+    System.out.println("New Board:"); //prints out the String
+    char [][] newBoard; //declares the array
+    newBoard = generateNextBoard(board); //initializes the array (the memory is created to store values)
+    printBoard(newBoard); //prints out a grid of an array, it's a void method, no value is being returned 
     /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     char[][] board;
     board = createNewBoard(25,25);
