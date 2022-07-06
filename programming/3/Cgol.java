@@ -45,12 +45,20 @@ import java.util.*;
 
 public class Cgol
 {
-  
+  //final char alive = 'X';
+  //final char dead = '-';
 
   //create, initialize, and return  empty board (all cells dead)
   public static char[][] createNewBoard( int rows, int cols )
   {
-
+    char[][] board = new char[rows][cols];
+    for (int i = 0; i < rows; i++) 
+      {
+        for (int j = 0; j < cols; j++) {
+        board[i][j] = '-'; //fills empty the board with dashes for visualization
+      }
+    }
+    return board;
   }
 
 
@@ -81,21 +89,27 @@ public class Cgol
   //return number of living neigbours of board[r][c]
   public static int countNeighbours( char[][] board, int r, int c )
   {
-    int living = 0;
-
-    for(int row = 0;row < board.length;i++){
-      for(int col = 0;col < board[i].length;j++){
-        for(int i = -1;i < 2;i++){
-          for(int j = -1;j < 2;j++){
-            if((row + i >= 0 && row + i < r) && (col + j >= 0 && col + j < c)){
-              living += board[row + i][col + j];
+    int livingCt = 0;
+    
+    for(int i = -1;i < 2;i++)
+    { //looks at every neighbor of that cell in the row
+      for(int j = -1;j < 2;j++)
+      { //looks at every neighbor of that cell in the col
+          if((r + i >= 0 && r + i < r) && (c + j >=0 && c + j < c))
+          {
+            if(board[i][j] == 'X')
+            {
+              livingCt++; //goes up by 1 to continue counting our living neighbors
             }
+              
           }
+      }
           
-        }
-        living -= board[row][col];
-//maybe create a copy of the board to hold information temporarily? Maybe this array could hold whether the current generation status will live or die
+    }
+        
+    return livingCt;
   }
+//maybe create a copy of the board to hold information temporarily? Maybe this array could hold whether the current generation status will live or die  
 
 
   /**
@@ -105,23 +119,39 @@ public class Cgol
   */
  public static char getNextGenCell( char[][] board,int r, int c )
   {
-
+// if (living)
+ //   if (lives == 2 || lives == 3)
+//    board[i][j] =
+// else
+//   if(lives ==3)
+//     board[i][j]=
   }
 
 
-  //generate and return a new board representing next generation
+  generate and return a new board representing next generation
   public static char[][] generateNextBoard( char[][] board )
   {
 
-  }
+    
+}
+
 
 
   public static void main( String[] args )
   {
+    char[][] board;
+    board = createNewBoard(5,5);
+    // final char alive = 'X';
+    // final char dead = '-';
+    //breathe life into some cells:
+    setCell(board, 0, 0, 'X');
+    setCell(board, 0, 1, 'X');
+    setCell(board, 1, 0, 'X');
+    printBoard(board);
     /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     char[][] board;
     board = createNewBoard(25,25);
-
+    
     //breathe life into some cells:
     setCell(board, 0, 0, 'X');
     setCell(board, 0, 1, 'X');
@@ -142,6 +172,7 @@ public class Cgol
     printBoard(board);
     System.out.println("--------------------------\n\n");
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-  }//end main()
+    
+  } //end main()
 
 }//end class
