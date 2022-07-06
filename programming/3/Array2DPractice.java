@@ -108,14 +108,14 @@ public class Array2DPractice
      @@@@
      xxxx
   */
-  //I worked thorugh this with help from TA Kevin:
+  //I worked thorugh this with help from TA Kevin Lin:
   public static void setRow( char[][] board, int row, char value )
   {
     //for(int r = 0; r < board.length; r++) (don't need this)
       //{
         for(int c = 0; c < board[row].length; c++)
         {
-          board[row][c] = value;//this 
+          board[row][c] = value;//this uses the arguments from main to make the changes
         }
       //}
         
@@ -126,7 +126,7 @@ public class Array2DPractice
      creates and returns a new 2D array of char the same size as
      original and copies all the elements
   */
-  public static char[][] copyBoard( char[][] original )//this code was demonstrated by Ed Harris and his group in the main class session
+  public static char[][] copyBoard( char[][] original )//this code was demonstrated by Ed Harris and his group in the main class session, TA Kevin Lin helped me comment and understand
   {
     char[][] copy = new char[original.length][original[0].length];
     //[original[0].length] = measures the length of the first row starting at index 0 to determine the number of cols
