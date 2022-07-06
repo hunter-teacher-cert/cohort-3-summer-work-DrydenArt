@@ -103,7 +103,7 @@ public class Cgol
      postcond: return next generation cell state based on CGOL rules
      (alive 'X', dead ' ')
   */
-  public static char getNextGenCell( char[][] board,int r, int c )
+ public static char getNextGenCell( char[][] board,int r, int c )
   {
 
   }
