@@ -155,9 +155,9 @@ public static char[][] generateNextBoard( char[][] board )
     setCell(board, 3, 2, 'X');
     setCell(board, 3, 3, 'X');
     setCell(board, 3, 4, 'X');
+    setCell(board, 4, 0, 'X');
     printBoard(board);
-    System.out.println("The cell is alive");
-    System.out.println(countNeighbours(board, 0, 0));
+    System.out.println("--------------------------\n\n");
     System.out.println("New Board:");
     char [][] newBoard;
     newBoard = generateNextBoard(board);
@@ -178,7 +178,7 @@ public static char[][] generateNextBoard( char[][] board )
 
     System.out.println("Gen X:");
     printBoard(board);
-    System.out.println("--------------------------\n\n");
+    ;
 
     board = generateNextBoard(board);
 
