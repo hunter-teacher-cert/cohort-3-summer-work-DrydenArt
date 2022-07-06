@@ -36,13 +36,13 @@ public class Cgol
   public static char[][] createNewBoard( int rows, int cols )
   {
     char[][] board = new char[rows][cols];
-    for (int i = 0; i < rows; i++) 
+    for (int i = 0; i < rows; i++) //this reads every cell in the row
       {
-        for (int j = 0; j < cols; j++) {
-        board[i][j] = '-'; //fills empty the board with dashes for visualization
+        for (int j = 0; j < cols; j++) { //and reads every cell in the col
+        board[i][j] = '-'; //fills empty the board with dashes for visualization, indicates a dead cell
       }
     }
-    return board;
+    return board;//this is outside the for loop (completed), now it returns the board
   }
 
 
@@ -50,7 +50,7 @@ public class Cgol
   public static void printBoard( char[][] board )
   {//int numRows = board.length;
     //int numCols = board[0].length;
-    for (int i = 0; i < board.length; i++)
+    for (int i = 0; i < board.length; i++) //goes over the entire board and prints it out
       {
         for (int j = 0; j < board[i].length; j++)
           {
@@ -65,7 +65,7 @@ public class Cgol
   //set cell (r,c) to val
   public static void setCell( char[][] board, int r, int c, char val )
   {
-        board[r][c]=val;
+        board[r][c]=val;//passing the board as a parameter, sets a particular cell to be alive.  This is determined in main.  
   }
 
 
@@ -81,7 +81,7 @@ public class Cgol
     int rowLim = (r + 1 > board.length - 1) ? r + 1 : r + 2;  
     int colLim = (c + 1 > board[0].length - 1) ? c + 1 :  c + 2;
 
-    int livingCt = 0;
+    int livingCt = 0;//this is what the method is looking for and keeping track of, this gets returned at the end once all the method is complete
     
     for(int row = startR; row < rowLim;row++)
     {
@@ -95,7 +95,7 @@ public class Cgol
         }
       }  
     }
-    return livingCt;
+    return livingCt;//this data is from the int livingCt = 0; above
   }
 //maybe create a copy of the board to hold information temporarily? Maybe this array could hold whether the current generation status will live or die  
 
@@ -108,7 +108,7 @@ public class Cgol
  public static char getNextGenCell( char[][] board,int r, int c )
   {
     char nextGen = board[r][c];
-    int numNeighbours = countNeighbours(board,r,c);
+    int numNeighbours = countNeighbours(board,r,c);//checks the neighbors at r and c
     if(board[r][c]== alive){
       if(numNeighbours == 2 || numNeighbours ==3){// alive cell
         nextGen = alive;
@@ -125,17 +125,17 @@ public class Cgol
       nextGen = dead;
     }
   }
-    return nextGen;
+    return nextGen;//returns either the X or the - for alive or dead
   }
 
 
   // generate and return a new board representing next generation
 public static char[][] generateNextBoard( char[][] board )
-  {
+  {//returns a 2D array
     char [][] newBoard = new char[board.length][board[0].length];
     for (int i =0; i<board.length; i++){
       for(int j=0; j<board[0].length; j++){
-        newBoard[i][j] = getNextGenCell(board,i,j );
+        newBoard[i][j] = getNextGenCell(board,i,j );//gives the data from getNextGenCell and puts in into the newBoard
       }
     }
     return newBoard;
