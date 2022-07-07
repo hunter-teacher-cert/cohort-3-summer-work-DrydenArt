@@ -7,7 +7,7 @@
 public class Fib
 {
 
-  //your implementation of fib(n) here
+  //your implementation of fib(n) here:  I used the notes from the lecture
   public static int fib(int n)
   {
     if (n == 0 || n == 1)
