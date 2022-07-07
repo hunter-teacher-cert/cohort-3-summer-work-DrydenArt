@@ -6,6 +6,8 @@ import java.util.*;
  * Time class by Team LucidThinkeren
  * Elizabeth Rechtin
  * collaborators: Ed Hawkins, Thea Williams, Christopher DeSilva
+    I went through this line by line with Vasyl Ilnytskyy during office hours
+    also present were: Patti Elfers, Alana Robinson, Jenna Lin, Saranii, Muller, Stacy Goldstein, Christine Marra
  */
 
 /**
@@ -41,15 +43,15 @@ public class Time {
     // You can change this if you want to use the alternate
     // implementation of just storing the overall seconds.
     
-    int hours;
-    int minutes;
-    int seconds;
+    private int hours; //these lines are declaring that these variables exist
+    private int minutes; //you should always make these private
+    private int seconds;
 
-    // Constructors
+    // Constructors - this is the default constructor
     public Time()
   {
-	  this.hours = 0; //creatingObject.inthours=0
-	  this.minutes = 0;
+	  this.hours = 0; //these lines are initializing it to zero
+	  this.minutes = 0;//you have to use this. it's a naming convention in java
 	  this.seconds = 0;
 	
     }
@@ -62,6 +64,9 @@ public class Time {
        
      */
     public Time(int hrs, int mins, int secs){
+      this.hours = hrs;
+      this.minutes = mins;
+      this.seconds = secs;
 
 	// your code here
 	
@@ -74,7 +79,7 @@ public class Time {
        returns a string representation of the time
     */
     public String toString(){
-	return("This should be changed to return the time in a nice form");
+	return(this.hours + " hours" + this.minutes + " minutes" + this.seconds + " minutes");
     }
 
 

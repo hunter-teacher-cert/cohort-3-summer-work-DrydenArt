@@ -1,4 +1,4 @@
-import java.io.*;
+//import java.io.*;
 import java.util.*;
 
 
@@ -23,12 +23,17 @@ import java.util.*;
 public class Driver {
 
     public static void main(String[] args) {
+    	//declare a var of appropriate type to assign an instance of Time to
+    	Time t;//an object of the class Time
 
-	//declare a var of appropriate type to assign an instance of Time to
-	Time t;
+    
+      
 
-	//assign var the address of a newly-apportioned Time object
-	t = new Time();
+      Time timeVar = new Time(2,2,2); // defualt constructor
+    
+    	//assign var the address of a newly-apportioned Time object
+    	t = new Time();  //uses the constructor to build the foundation with these data
+      System.out.println(t.toString());
+      
     }//end main()
-
 }//end class

@@ -15,14 +15,19 @@ public class Fence
      eg
      fenceR(1) -> "|"
      fenceR(2) -> "|--|"
-  */
+  */          //returns string, takes integer to determine the return the size of the string
   public static String fenceR( int n )
   {/* YOUR SIMPLE, SMART IMPLEMENTATION HERE */
-    String fenceR(1) = "|";
-    String fenceR(2) = "--|";
-    if (n == 0)
+    
+    if (n == 0) //establishes base case
     {
-      return "";
+      return ""; //this will return a space, however the "" could be empty,too
+    }else if (n == 1) //another base case
+    {
+      return "|"; //when it gets to 1, it just returns the one post
+    }else
+    {
+      return fenceR(n-1) + "--|"; //everything else 
     }
     
     
