@@ -181,8 +181,14 @@ public class ArrayPractice
   public static boolean isSorted( int[] data )
   {
     /* YOUR BRILLIANT CODE HERE */
-
-    return true; // replace this
+    for(int i = 0; i<data.length-1; i++)
+    {
+      if(data [i+1] < data[i])
+      {
+        return false;
+      }
+    } 
+    return true;
 
   }
 
@@ -218,8 +224,10 @@ public class ArrayPractice
   public static int countOdds( int[] data ) {
     int count = 0;
 
-    /* YOUR BRILLIANT CODE HERE */
-
+    for(int i = 0; i< data.length; i++)
+    {
+      if(data[i] %2 == 1) count++; //1 indicates odd, 0 is even
+    } 
     // Note the % operator is the modulo (basically remainder) function
     // in java. Use to determine if an integer is odd.
 
@@ -243,26 +251,32 @@ public class ArrayPractice
   */
   public static void flip( int[] data )//as demonstrated by Will Lamorie
   {
-    int[] intermi
-    /* YOUR BRILLIANT CODE HERE */
+    for(int i = 0; i<data.length/2; i++)
+    {
+      int a = data[i];
+      data[i] = data[data.length -1 -i];
+      data[data.length-1 -i] = a; 
+    }
+    
   }
 
 
   public static void main( String[] args )
   {
-
     // remove the comments as you complete each routine
     // and add more lines as you add additional routines.
-
     int[] data = buildRandomArray(5, 10);
     
     // int[] data2 = buildIncreasingArray(10,5,3);
     printArray(data);
-    System.out.println("The sum of the integers in the array is " + arraySum(data) + ".");
+    System.out.println("The sum of the integers in the array is " +     arraySum(data) + ".");
     System.out.println("The first occurrence of 3 in the array is in the index of " + firstOccurence(data, 3) + ".");
     System.out.println("The largest number in the array is " + findMaxValue(data) + ".");
     printArray(buildIncreasingArray(5,3,2));
-    // printArray(data2);
+    System.out.println(isSorted(data));
+    System.out.println(countOdds(data));
+    flip(data);
+    printArray(data);
 
     // add calls to show that the methods you write work.
   }
