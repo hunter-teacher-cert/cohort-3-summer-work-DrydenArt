@@ -112,6 +112,19 @@ public class Time {
     public void add(Time other){
 	// add the code to add the time represented by other
 	// to this instance.
+      // this approach was demonstrated in class by Will LaMorie
+      hours += other.hours;
+      seconds += other.hours;
+      if(seconds >= 60)
+      {
+        minutes += 1;
+        seconds -= 60;
+      }
+      minutes += other.minutes;
+      if(minutes >= 60)
+      {
+        hours += 1;
+        minutes -= 60;
 
     }
 
@@ -125,19 +138,7 @@ public class Time {
        false otherwise.
     */
     public boolean equals(Time other){
-	// this approach was demonstrated in class by Will LaMorie
-      hours += other.hours;
-      seconds += other.hours;
-      if(seconds >= 60)
-      {
-        minutes += 1;
-        seconds -= 60;
-      }
-      minutes += other.minutes;
-      if(minutes >= 60)
-      {
-        hours += 1;
-        minutes -= 60;
+	
       }
       
 
