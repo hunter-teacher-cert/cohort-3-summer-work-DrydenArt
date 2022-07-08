@@ -35,7 +35,7 @@ public class Driver {
       Time timeVar = new Time(2,2,2); // defualt constructor
     
     	//assign var the address of a newly-apportioned Time object
-    	t = new Time(); //uses the constructor to build the foundation with data
+    	Time t = new Time(); //declares t as a Time object also initializes it
       System.out.println(t1.toString());
       
     }//end main()
