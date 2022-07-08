@@ -115,12 +115,14 @@ public class Time {
       // this approach was demonstrated in class by Will LaMorie
       hours += other.hours;
       seconds += other.hours;
+      
       if(seconds >= 60)
       {
         minutes += 1;
         seconds -= 60;
       }
       minutes += other.minutes;
+      
       if(minutes >= 60)
       {
         hours += 1;
