@@ -28,15 +28,14 @@ public class Driver {
       System.out.println("Class starts at: " + t1);
       //String temp = t + "!"; java looks and tries to cast t to a string
       //System.out.println(temp);
-
-    
       
 
-      Time timeVar = new Time(2,2,2); // defualt constructor
-    
+      Time timeVar = new Time(2,2,2); // default constructor
+      t1.add (timeVar);
     	//assign var the address of a newly-apportioned Time object
     	Time t = new Time(); //declares t as a Time object also initializes it
       System.out.println(t1.toString());
+      System.out.println (t1.equals (timeVar));
       
     }//end main()
 }//end class
