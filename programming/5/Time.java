@@ -45,9 +45,9 @@ public class Time {
     
     private int hours; //these lines are declaring that these variables exist
     private int minutes; //you should always make these private
-    private int seconds;
+    private int seconds; //private indicates data encapsulation (only readable within the class)
 
-    // Constructors - this is the default constructor
+    // Constructors - this is the default constructor, comes after the variables, before all other methods
     public Time()
   {
 	  this.hours = 0; //these lines are initializing it to zero
@@ -64,7 +64,7 @@ public class Time {
        
      */
     public Time(int hrs, int mins, int secs){
-      this.hours = hrs;
+      this.hours = hrs;//this. = refers to a specific object of time (it calls the object)
       this.minutes = mins;
       this.seconds = secs;
 
@@ -76,11 +76,12 @@ public class Time {
     // Methods
 
     /**
-       returns a string representation of the time
+       returns a string representation of the time (the concatenation casts ints to strings)
     */
+    //could also write it like this: (this.hours + ":" + this.minutes + ":" + this.seconds) This will look like this: 8:10:05
     public String toString(){
-	return(this.hours + " hours" + this.minutes + " minutes" + this.seconds + " minutes");
-    }
+	return(this.hours + " hours," + this.minutes + " minutes," + this.seconds + " seconds.");
+    } //this will look like 8 hours, 10 minutes, 5 seconds.
 
 
     
@@ -91,10 +92,13 @@ public class Time {
 
        modifies this instance to represent the time hrs:mins:secs
     */
-    public void set(int hrs, int mins, int secs){
-	// add the code to add the time represented by other
+    //if we wanted to set lunch time, we would write it this way: lunchTime.set(12, 0, 0);
+    public void set(int hrs, int mins, int secs){ 
+	// add the code to set the time represented by other
 	// to this instance.
-
+      this.hours = hrs;//sets/assigns the variables into this.
+      this.minutes = mins;
+      this.seconds = secs;
     }
 
     
