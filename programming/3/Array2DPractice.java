@@ -208,7 +208,7 @@ public class Array2DPractice
     //    }
     //  }
     
-// //Marissa's way: she wrote this independently of the group:
+// //Marissa's way: 
 //     if (row != 0 && row != board.length-1) { //not on the top/bottom
 
 //       if (col != 0 && col != board[0].length-1) { //not on the left/right
