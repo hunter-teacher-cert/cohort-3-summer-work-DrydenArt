@@ -15,6 +15,18 @@ public class Driver
 
     Rational bad = new Rational( 3, 0 );
     System.out.println(bad);
+    
+    System.out.println( r + " as a floating pt approximation: "
+      + r.floatValue() );
+
+    Rational t = new Rational( 8, 5 );
+    System.out.print( r + " * " + t + " = ");
+    r.multiply(t);
+    System.out.println(r);
+
+    System.out.print( r + " / " + t + " = ");
+      r.divide(t);
+      System.out.println(r);
 
     /*~~~~~v~~~~~~~~~~down~goer~3~~~~~~~~~~~~~v~~~~~
 

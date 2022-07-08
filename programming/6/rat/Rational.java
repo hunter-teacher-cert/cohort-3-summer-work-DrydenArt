@@ -73,7 +73,7 @@ public class Rational
   public double floatValue()
   {
     /* YOUR ELEGANT CODE HERE */
-    return 0.0;
+    return((double)_numerator/_denominator);
   }
 
 
@@ -86,6 +86,8 @@ public class Rational
   public void multiply( Rational r )
   {
     /* YOUR ELEGANT CODE HERE */
+    _numerator *= r._numerator;
+    _denominator *= r._denominator;
   }
 
 
@@ -94,6 +96,15 @@ public class Rational
   public void divide( Rational r )
   {
     /* YOUR ELEGANT CODE HERE */
+    if (r._numerator != 0)
+    {
+      _numerator *= r._denominator;
+      _denominator *= r._numerator;
+    }else
+    {
+      System.out.println("Invalid ");
+    }
+    
   }
 
 }//end class
