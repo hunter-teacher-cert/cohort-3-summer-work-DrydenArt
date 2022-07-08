@@ -1,3 +1,4 @@
+
 /**
  * Rational class by Team BangPi
  * First Last
@@ -25,24 +26,35 @@
 public class Rational
 {
   // Instance variables aka attributes for numerator and denominator
-  private int _numerator;
-  private int _denominator;
+  private int _numerator; //p
+  private int _denominator; //q
 
 
   // default constructor (no parameters)
   // creates a new Rational with value 0/1
   public Rational()
   {
-    /* YOUR ELEGANT CODE HERE */
+    _numerator = 0;
+    _denominator = 1;
   }
 
 
   // overloaded constructor
   // takes 2 parameters, one for the numerator, one for the denominator
-  // if an invalid denominator is attempted, should print a message and set the number to 0/1
+  // if an invalid denominator is attempted, aka 0, should print a message and set the number to 0/1
   public Rational( int n, int d )
   {
     /* YOUR ELEGANT CODE HERE */
+    if (d == 0)
+    {
+      System.out.println("Invalid denominator");
+      _numerator = 0;
+      _denominator = 1;
+    }else 
+    {
+      _numerator = n;
+      _denominator = d;
+    }
   }
 
 
@@ -51,6 +63,7 @@ public class Rational
   public String toString()
   {
     /* YOUR ELEGANT CODE HERE */
+    return(_numerator + "/" + _denominator); 
   }
 
 
@@ -60,6 +73,7 @@ public class Rational
   public double floatValue()
   {
     /* YOUR ELEGANT CODE HERE */
+    return 0.0;
   }
 
 

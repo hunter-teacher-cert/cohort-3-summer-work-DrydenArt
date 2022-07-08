@@ -8,9 +8,16 @@ public class Driver
   public static void main( String[] args )
   {
     //cut/paste this leading comment bar down, one line at a time, as you test...
+    Rational s = new Rational();
+    System.out.println(s);
+    Rational r = new Rational( 3, 7 );
+    System.out.println(r);
+
+    Rational bad = new Rational( 3, 0 );
+    System.out.println(bad);
+
     /*~~~~~v~~~~~~~~~~down~goer~3~~~~~~~~~~~~~v~~~~~
-      Rational r = new Rational( 3, 7 );
-      Rational s = new Rational();
+
       Rational t = new Rational( 8, 5 );
       Rational u = new Rational( 1, 2 );
       Rational v = new Rational( 2, 3 );

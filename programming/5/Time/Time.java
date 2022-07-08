@@ -1,4 +1,4 @@
-import java.io.*;
+ import java.io.*;
 import java.util.*;
 
 
@@ -68,7 +68,6 @@ public class Time {
       this.minutes = mins;
       this.seconds = secs;
 
-	// your code here
 	
     }
     
@@ -126,7 +125,21 @@ public class Time {
        false otherwise.
     */
     public boolean equals(Time other){
-	// your code here)
+	// this approach was demonstrated in class by Will LaMorie
+      hours += other.hours;
+      seconds += other.hours;
+      if(seconds >= 60)
+      {
+        minutes += 1;
+        seconds -= 60;
+      }
+      minutes += other.minutes;
+      if(minutes >= 60)
+      {
+        hours += 1;
+        minutes -= 60;
+      }
+      
 
 	return false; // change this
     }
