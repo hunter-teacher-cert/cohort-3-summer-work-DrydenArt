@@ -70,7 +70,6 @@ public class SuperArray
 
     // add item
     data [numberElements] = value; //I'm just guessing here
-
     // increment numberElements
     numberElements++; //like this?
 
@@ -79,6 +78,7 @@ public class SuperArray
 
   public boolean isEmpty()
   {//return whether this SuperArray instance is empty
+    //this will need an if statement? and is referring to the number of elements?
     return false; //change later
     
     /* YOUR SIMPLE+SMART CODE HERE */
@@ -88,7 +88,6 @@ public class SuperArray
   public int get(int index)
   {
     //return item at index
-    /* YOUR SIMPLE+SMART CODE HERE */
     return 0; //change later
   }
 
