@@ -67,18 +67,24 @@ public class SuperArray
        then only write this section once the rest is tested and working.
     */
     /* YOUR SIMPLE+SMART CODE HERE */
+    //from E:
+    //if(numberElements <= data.length)??
 
     // add item
-    data [numberElements] = value; //I'm just guessing here
+    data [numberElements] = value; 
     // increment numberElements
-    numberElements++; //like this?
+    numberElements++; //opposite of decrement in remove method below
 
   }//end add()
 
 
   public boolean isEmpty()
   {//return whether this SuperArray instance is empty
-    //this will need an if statement? and is referring to the number of elements?
+    //from E: this will need an if statement? and is referring to the number of elements?
+    //if(numberElements == 0)
+    //{
+    //  return true; 
+    //}
     return false; //change later
     
     /* YOUR SIMPLE+SMART CODE HERE */
@@ -88,6 +94,7 @@ public class SuperArray
   public int get(int index)
   {
     //return item at index
+    //int g = data[i];
     return 0; //change later
   }
 
@@ -119,10 +126,16 @@ public class SuperArray
   public void remove(int index)
   {
     // shift items down to remove the item at index
-    /* YOUR SIMPLE+SMART CODE HERE */
+    //attempt from E (I'm basing this on my work on flip): 
+    // for(int i = 0; i<data.length; i++)
+    // {
+    //   int a = data[i];
+    //   data[i] = data[data.length -1 -i];
+    //   data[data.length-1 -i] = a; 
+    // }
 
     // subtract fom numElements;
-    /* YOUR SIMPLE+SMART CODE HERE */
+    //attempt from E: numberElements--; //the opposite in increment from the add method above
   }
 
 
@@ -130,6 +143,7 @@ public class SuperArray
   {
     // see if there's enough room
     /* YOUR SIMPLE+SMART CODE HERE */
+    //if(numberElements <= data.length) can I use value instead of numberElements?
 
     // shift elements toward the end of the array
     /* YOUR SIMPLE+SMART CODE HERE */
@@ -139,6 +153,7 @@ public class SuperArray
 
     // increment numElements
     /* YOUR SIMPLE+SMART CODE HERE */
+    //numberElements++;
   }
 
 
@@ -147,13 +162,20 @@ public class SuperArray
     // create a new array with extra space
     // Q: How did you decide how much to increase capacity by?
     /* YOUR SIMPLE+SMART CODE HERE */
+    // int [] data2 = data.length+1;
 
     // copy over all the elements from the old array to the new one
-    /* YOUR SIMPLE+SMART CODE HERE */
+    /* YOUR SIMPLE+SMART CODE HERE */ 
+    //modified from my copyBoard:
+    //for(int i = 0; i<data.length; i++)
+    //{
+      //data[i] = data2[i];
+    //}
 
     // point data to the new array
     // Q: How does this look when illustrated using encapsulation diagram?
     /* YOUR SIMPLE+SMART CODE HERE */
+    //return data2[i];
   }//end grow()
 
 }//end class

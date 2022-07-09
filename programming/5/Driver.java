@@ -35,7 +35,7 @@ public class Driver {
     	//assign var the address of a newly-apportioned Time object
     	Time t = new Time(); //declares t as a Time object also initializes it
       System.out.println(t1.toString());
-      System.out.println (t1.equals (timeVar));
+      System.out.println (t1.isEquals (timeVar));
       System.out.println(t1.compareTo(timeVar));
       
     }//end main()

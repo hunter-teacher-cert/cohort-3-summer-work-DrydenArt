@@ -4,8 +4,8 @@ import java.util.*;
 
 /**
  * Time class by Team 14_7/7/22
- * * Name (First, Last): Théa Williams
- * collaborators: Christopher DeSilva, Ed Hawkins, Elizabeth Rechtin 
+ * * Name (First, Last): Elizabeth Rechtin
+ * collaborators: Christopher DeSilva, Ed Hawkins, Théa Williams
  */
 
 /**
@@ -137,7 +137,7 @@ public class Time {
        True if this instance and other represents the same time
        false otherwise.
     */
-    public boolean equals(Time other)
+    public boolean isEquals(Time other)
     {
 	    if (other.hours == hours && other.minutes == minutes && other.seconds == seconds)
       {
