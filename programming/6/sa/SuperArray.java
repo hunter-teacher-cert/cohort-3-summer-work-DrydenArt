@@ -103,7 +103,9 @@ public class SuperArray
   {
     //return stringified version of this Object
     /* YOUR SIMPLE+SMART CODE HERE */
-    return ""; //change later
+    return (""); //change later
+    //based on Kate's improvements to the skeleton, I think this would work??
+    //return ("This array capacity is " + data.length+1 + " and there are " + numberElements + " elements in it.");
   }//end toString()
 
 
