@@ -94,8 +94,11 @@ public class SuperArray
   public int get(int index)
   {
     //return item at index
-    //int g = data[i];
-    return 0; //change later
+    //for(int i = 0; i<data.length; i++) //(from flip)
+    // {
+    //   int index = data[i];
+    // }
+    return 0; //change later --I want it to return the index, do I change the return to: return [i]; ??
   }
 
 
@@ -131,9 +134,9 @@ public class SuperArray
     //attempt from E (I'm basing this on my work on flip): 
     // for(int i = 0; i<data.length; i++)
     // {
-    //   int a = data[i];
+    //   int index = data[i];
     //   data[i] = data[data.length -1 -i];
-    //   data[data.length-1 -i] = a; 
+    //   data[data.length-1 -i] = index; 
     // }
 
     // subtract fom numElements;
@@ -145,7 +148,7 @@ public class SuperArray
   {
     // see if there's enough room
     /* YOUR SIMPLE+SMART CODE HERE */
-    //if(numberElements <= data.length) can I use value instead of numberElements?
+    //if(numberElements <= data.length) can I use value instead of numberElements? do I need to add +1 to the length?
 
     // shift elements toward the end of the array
     /* YOUR SIMPLE+SMART CODE HERE */
@@ -164,7 +167,7 @@ public class SuperArray
     // create a new array with extra space
     // Q: How did you decide how much to increase capacity by?
     /* YOUR SIMPLE+SMART CODE HERE */
-    // int [] data2 = data.length+1;
+    // int [] data2 = data.length +5;
 
     // copy over all the elements from the old array to the new one
     /* YOUR SIMPLE+SMART CODE HERE */ 
