@@ -1,0 +1,19 @@
+Exercise 4.1 
+
+1. What is the output of the program?
+
+ping:  When ping is invoked, a period is printed (output)
+baffle:When baffle is invoked, wug it output, followed by a period (since ping is invoked within the method).
+
+Therefore, the output of the program is: 
+No, I wug.
+You wugga wug.
+I wug.
+
+
+2. See Stack Diagram: StackDiagram.jpg
+
+3. What happens if you invoke baffle (); at the end of the ping method?  The program will keep repeating wug. on new lines --why? 
+ because it will it continue to loop between the ping(); method and  the baffle(); method, since baffle(); invokes ping(); and ping inovkes baffle();
+
+4.  I checked my answers by compiling and running ReadCode.java. Once I ran it, I saw that I had interpreted the code correctly and predicted the answer to #3 correctly as well. What I found was that it will reapeat wug. on new lines, but only to a certain number of lines. 
