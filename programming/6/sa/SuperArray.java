@@ -1,7 +1,7 @@
 /**
  * SuperArray by Team MarvelvsDC
- * First Last
- * collaborators: First Last, First Last
+ * Elizabeth Rechtin
+ * collaborators: David Moste, Adam Driggers
  */
 
 /**
@@ -36,7 +36,7 @@ public class SuperArray
 
   // ~~~~~~~~~~~~~~~ CONSTRUCTORS ~~~~~~~~~~~~~~~
   //overloaded constructor -- allows specification of initial capacity
-  public SuperArray( int size )
+  public SuperArray( int size )//this is where you create your default values
   {
     //init underlying/inner storage of specified capacity
     data = new int[size];
@@ -80,12 +80,11 @@ public class SuperArray
 
   public boolean isEmpty()
   {//return whether this SuperArray instance is empty
-    //from E: this will need an if statement? and is referring to the number of elements?
-    //if(numberElements == 0)
-    //{
-    //  return true; 
-    //}
-    return false; //change later
+    if(numberElements == 0)
+    {
+      return true; 
+    }
+    return false; 
     
     /* YOUR SIMPLE+SMART CODE HERE */
   }
@@ -94,21 +93,21 @@ public class SuperArray
   public int get(int index)
   {
     //return item at index
-    //for(int i = 0; i<data.length; i++) //(from flip)
-    // {
-    //   int index = data[i];
-    // }
-    return 0; //change later --I want it to return the index, do I change the return to: return [i]; ??
+    return data[index]; //returns the value at the index
   }
 
 
   public String toString()
   {
+      //should return something "[1, 2, 3, 5]"
     //return stringified version of this Object
     /* YOUR SIMPLE+SMART CODE HERE */
     return (""); //change later
     //based on Kate's improvements to the skeleton, I think this would work??
-    //return ("This array capacity is " + data.length+1 + " and there are " + numberElements + " elements in it.");
+    for(int i = 0; i<data.length; i++)
+    //return ("This array is " + numberElements + " elements in it.");
+
+    
   }//end toString()
 
 
@@ -167,20 +166,20 @@ public class SuperArray
     // create a new array with extra space
     // Q: How did you decide how much to increase capacity by?
     /* YOUR SIMPLE+SMART CODE HERE */
-    // int [] data2 = data.length +5;
+    int [] data2 = new int [data.length +5]; //create a new array that is bigger
 
     // copy over all the elements from the old array to the new one
     /* YOUR SIMPLE+SMART CODE HERE */ 
     //modified from my copyBoard:
-    //for(int i = 0; i<data.length; i++)
-    //{
-      //data[i] = data2[i];
-    //}
+    for(int i = 0; i<data.length; i++)
+    {
+      data2[i] = data[i];
+    }
 
     // point data to the new array
     // Q: How does this look when illustrated using encapsulation diagram?
     /* YOUR SIMPLE+SMART CODE HERE */
-    //return data2[i];
+    data = data2; //point data to the new array data2
   }//end grow()
 
 }//end class
