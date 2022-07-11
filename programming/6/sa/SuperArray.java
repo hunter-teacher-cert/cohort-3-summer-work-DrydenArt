@@ -71,7 +71,7 @@ public class SuperArray
     //if(numberElements <= data.length)??
 
     // add item
-    data [numberElements] = value; 
+    data [numberElements] = value; //adds the value that came in from the main
     // increment numberElements
     numberElements++; //opposite of decrement in remove method below
 
@@ -80,13 +80,18 @@ public class SuperArray
 
   public boolean isEmpty()
   {//return whether this SuperArray instance is empty
-    if(numberElements == 0)
+    if(numberElements == 0)//this is an evaluation
     {
       return true; 
-    }
-    return false; 
-    
+    }else //added this else statement after class demo, not sure if I needed it
+      {
+        return false;
+      }
+     
     /* YOUR SIMPLE+SMART CODE HERE */
+    //can also write this as: 
+    //return numberElements == 0;  this is a statement: is numberElements == 0? true/false is returned, 
+    //"reduced to" or "replaced" this all still has to be evaluated
   }
 
 
@@ -99,14 +104,15 @@ public class SuperArray
 
   public String toString()
   {
-      //should return something "[1, 2, 3, 5]"
-    //return stringified version of this Object
-    /* YOUR SIMPLE+SMART CODE HERE */
-    return (""); //change later
-    //based on Kate's improvements to the skeleton, I think this would work??
+    //build a string and then return
+    String a = "";
+    //return stringified version of this Object, should return something "
     for(int i = 0; i<data.length; i++)
-    //return ("This array is " + numberElements + " elements in it.");
-
+    {
+      a = a + data[i] + ", "; //update the string with the new value
+      // shorthand //a += data[i] + ", ";
+    }
+    return a; //change later
     
   }//end toString()
 
@@ -179,7 +185,7 @@ public class SuperArray
     // point data to the new array
     // Q: How does this look when illustrated using encapsulation diagram?
     /* YOUR SIMPLE+SMART CODE HERE */
-    data = data2; //point data to the new array data2
+    data = data2; //points data from array data to the new array data2
   }//end grow()
 
 }//end class
