@@ -19,7 +19,7 @@ public class SuperArrayDriver
 
     //precondition: newly-instantiated SuperArray of default capacity
     System.out.println("Testing overfill (calling grow() in add)");
-    for (int i=0; i<10; i++) {
+    for (int i=0; i<15; i++) {
       sa.add(i);
     }//for i
     System.out.println(sa);

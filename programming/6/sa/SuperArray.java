@@ -1,4 +1,4 @@
-/**
+//**
  * SuperArray by Team MarvelvsDC
  * Elizabeth Rechtin
  * collaborators: David Moste, Adam Driggers
@@ -155,18 +155,22 @@ public class SuperArray
   public void add(int index, int value)
   {
     // see if there's enough room
-    /* YOUR SIMPLE+SMART CODE HERE */
-    //if(numberElements <= data.length) can I use value instead of numberElements? do I need to add +1 to the length?
+    if(numberElements == data.length) //narrowest condition(not including), only grow if we need to
+    {
+      grow();
+    }
 
-    // shift elements toward the end of the array
-    /* YOUR SIMPLE+SMART CODE HERE */
+    // shift elements toward the end of the array - started with the end of the array and moved towards the start
+    for(int i = numberElements-1; i >= index; i--)
+      {
+        data[i+1] = data[i];//the value at i+1 becomes the current value at i, each elements moves one space to the right
+      }
 
     // insert new element
-    /* YOUR SIMPLE+SMART CODE HERE */
+    data[index] = value; //the element at location of the index becomes the value
 
     // increment numElements
-    /* YOUR SIMPLE+SMART CODE HERE */
-    //numberElements++;
+    numberElements++;
   }
 
 
