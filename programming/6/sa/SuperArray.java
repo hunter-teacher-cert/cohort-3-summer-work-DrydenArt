@@ -68,7 +68,7 @@ public class SuperArray
     */
     /* YOUR SIMPLE+SMART CODE HERE */
     //from E:
-    if(numberElements >= data.length)
+    if(numberElements == data.length) //narrowest condition(not including)
     {
       grow();
     }
@@ -110,7 +110,7 @@ public class SuperArray
     //build a string and then return
     String a = "";
     //return stringified version of this Object, should return something "
-    for(int i = 0; i<data.length; i++)
+    for(int i = 0; i< numberElements; i++)
     {
       a = a + data[i] + ", "; //update the string with the new value
       // shorthand //a += data[i] + ", ";
@@ -138,17 +138,17 @@ public class SuperArray
 
   public void remove(int index)
   {
-    // shift items down to remove the item at index
+    if(index <= numberElements){ //only do this if the index is within the array
+      // shift items down to remove the item at index
     //attempt from E (I'm basing this on my work on flip): 
-    // for(int i = 0; i<data.length; i++)
-    // {
-    //   int index = data[i];
-    //   data[i] = data[data.length -1 -i];
-    //   data[data.length-1 -i] = index; 
-    // }
+      for(int i = index; i < numberElements-1; i++)
+      {
+        data[i] = data[i+1];//the index takes the value of the next index (and so on)
+      }
 
-    // subtract fom numElements;
-    //attempt from E: numberElements--; //the opposite in increment from the add method above
+      // subtract fom numElements;
+      numberElements--; //the opposite in increment from the add method above
+    }
   }
 
 
