@@ -68,7 +68,10 @@ public class SuperArray
     */
     /* YOUR SIMPLE+SMART CODE HERE */
     //from E:
-    //if(numberElements <= data.length)??
+    if(numberElements >= data.length)
+    {
+      grow();
+    }
 
     // add item
     data [numberElements] = value; //adds the value that came in from the main
@@ -171,12 +174,9 @@ public class SuperArray
   {
     // create a new array with extra space
     // Q: How did you decide how much to increase capacity by?
-    /* YOUR SIMPLE+SMART CODE HERE */
-    int [] data2 = new int [data.length +5]; //create a new array that is bigger
+    int [] data2 = new int [data.length + 5]; //create a new array that is bigger
 
     // copy over all the elements from the old array to the new one
-    /* YOUR SIMPLE+SMART CODE HERE */ 
-    //modified from my copyBoard:
     for(int i = 0; i<data.length; i++)
     {
       data2[i] = data[i];
@@ -185,7 +185,7 @@ public class SuperArray
     // point data to the new array
     // Q: How does this look when illustrated using encapsulation diagram?
     /* YOUR SIMPLE+SMART CODE HERE */
-    data = data2; //points data from array data to the new array data2
+    data = data2; //points data from array data to the new array, data2
   }//end grow()
 
 }//end class
