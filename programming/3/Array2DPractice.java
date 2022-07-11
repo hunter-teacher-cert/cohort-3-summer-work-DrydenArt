@@ -179,98 +179,99 @@ public class Array2DPractice
      Note: Make sure to correctly handle the cases when you try
      to explode an element on the edges.
   */
-  //public static void explodeSquare( char[][] board, int row, int col )
-  //{
+  public static void explodeSquare( char[][] board, int row, int col )
+  {
     //check to determine the row is not top or bottom, and that the col is not left or right
     //if it's not, then put an xx in the top, bottom, left, right, top left, top right, bottom left and bottom right
     //if it's on the top: 
     //if it's on the bottom:
     //if it's on the 
 
-    // //Will's suggestion: he wrote this out with the group, and was explaining as he went along, with notes:
+    // //Will's suggestion: 
     // // // for all from row -1 > row + 1 where value >= 0 and < board.length
-    // for(int i = row -1; i <= row +1; i++){ 
-       
-    //   if(i >=0 && i < board.length){ // constrain to board
+    //   for(int i = row -1; i <= row +1; i++)
+    //   { 
+    //    if(i >=0 && i < board.length)// constrain to board
+    //   { 
     
-    //      // we now have the 3 possbale values for row, but just on the board
+    // //      // we now have the 3 possbale values for row, but just on the board
     
-    //      for(int j = col - 1; j <= col +1; j ++){
+    //       for(int j = col - 1; j <= col +1; j ++){
     
-    //        if(j >= 0 && j < board[0].length){ // constrain to board
+    //         if(j >= 0 && j < board[0].length){ // constrain to board
              
-    //         if(i != row || j != col){
-    //          board[i][j] = 'X'; // almost done
+    //          if(i != row || j != col){
+    //           board[i][j] = 'X'; // almost done
+    //          }
     //         }
-    //        }
-    //      }
+    //       }
         
-    //    }
-    //  }
+    //     }
+    //   }
     
 // //Marissa's way: 
-//     if (row != 0 && row != board.length-1) { //not on the top/bottom
+    if (row != 0 && row != board.length-1) { //not on the top/bottom
 
-//       if (col != 0 && col != board[0].length-1) { //not on the left/right
+      if (col != 0 && col != board[0].length-1) { //not on the left/right
 
-//         board[row-1][col] = 'x'; //above
-//         board[row+1][col] = 'x'; //below
-//         board[row][col-1] = 'x'; //left
-//         board[row][col+1] = 'x'; //right
-//         board[row-1][col-1] = 'x'; //above left
-//         board[row-1][col+1] = 'x'; //above right
-//         board[row+1][col-1] = 'x'; //below left
-//         board[row+1][col+1] = 'x'; //below right
+        board[row-1][col] = 'x'; //above
+        board[row+1][col] = 'x'; //below
+        board[row][col-1] = 'x'; //left
+        board[row][col+1] = 'x'; //right
+        board[row-1][col-1] = 'x'; //above left
+        board[row-1][col+1] = 'x'; //above right
+        board[row+1][col-1] = 'x'; //below left
+        board[row+1][col+1] = 'x'; //below right
         
         
-//       }
-//     } 
-//     else if (row == 0) { //top row
-//       if (col != 0 && col != board[0].length-1) { //top center
-//         board[row+1][col] = 'x'; //below
-//         board[row][col-1] = 'x'; //left
-//         board[row][col+1] = 'x'; //right
-//         board[row+1][col-1] = 'x'; //below left
-//         board[row+1][col+1] = 'x'; //below right
-//       }
-//       else if (col == 0) { //top left
-//         board[row+1][col] = 'x'; //below
-//         board[row][col+1] = 'x'; //right
-//         board[row+1][col-1] = 'x'; //below left
-//       }
-//       else if (col == board[0].length-1) { //top right
-//         board[row+1][col] = 'x'; //below
-//         board[row][col-1] = 'x'; //left
-//         board[row+1][col-1] = 'x'; //below left
-//       }
-//     }
+      }
+    } 
+    else if (row == 0) { //top row
+      if (col != 0 && col != board[0].length-1) { //top center
+        board[row+1][col] = 'x'; //below
+        board[row][col-1] = 'x'; //left
+        board[row][col+1] = 'x'; //right
+        board[row+1][col-1] = 'x'; //below left
+        board[row+1][col+1] = 'x'; //below right
+      }
+      else if (col == 0) { //top left
+        board[row+1][col] = 'x'; //below
+        board[row][col+1] = 'x'; //right
+        board[row+1][col-1] = 'x'; //below left
+      }
+      else if (col == board[0].length-1) { //top right
+        board[row+1][col] = 'x'; //below
+        board[row][col-1] = 'x'; //left
+        board[row+1][col-1] = 'x'; //below left
+      }
+    }
 
-//     else if (row == board.length - 1) { //bottom
-//       if (col != 0 && col != board[0].length-1) { //bottom center
-//         board[row-1][col] = 'x'; //above
-//         board[row][col-1] = 'x'; //left
-//         board[row][col+1] = 'x'; //right
-//         board[row-1][col-1] = 'x'; //above left
-//         board[row-1][col+1] = 'x'; //above right
-//       }
+    else if (row == board.length - 1) { //bottom
+      if (col != 0 && col != board[0].length-1) { //bottom center
+        board[row-1][col] = 'x'; //above
+        board[row][col-1] = 'x'; //left
+        board[row][col+1] = 'x'; //right
+        board[row-1][col-1] = 'x'; //above left
+        board[row-1][col+1] = 'x'; //above right
+      }
 
-//       else if (col == 0) { //bottom left
-//         board[row-1][col] = 'x'; //above
-//         board[row][col+1] = 'x'; //right
-//         board[row-1][col+1] = 'x'; //above right
-//       }
+      else if (col == 0) { //bottom left
+        board[row-1][col] = 'x'; //above
+        board[row][col+1] = 'x'; //right
+        board[row-1][col+1] = 'x'; //above right
+      }
 
-//       else if (col == board[0].length -1) {
-//         board[row-1][col] = 'x'; //above
-//         board[row][col-1] = 'x'; //left
-//         board[row-1][col-1] = 'x'; //above left
-//       }
-//     }
+      else if (col == board[0].length -1) {
+        board[row-1][col] = 'x'; //above
+        board[row][col-1] = 'x'; //left
+        board[row-1][col-1] = 'x'; //above left
+      }
+    }
 
 
-//     // return board;
+    // return board;
     
-//   }
+}
 
   /**
      This method will search through the 2D array board and it will
@@ -313,21 +314,21 @@ public class Array2DPractice
 
 
 
-  //this was Melissa's code:
-  // public static void explodeAllChar(char[][] board, char c)
-  // {
-  //   for (int i=0; i<board.length; i++) {
+ 
+  public static void explodeAllChar(char[][] board, char c)
+  {
+    for (int i=0; i<board.length; i++) {
 
-  //     for (int j=0; j<board[0].length; j++) {
+      for (int j=0; j<board[0].length; j++) {
         
-  //       if (board[i][j] == c) {
-  //         explodeSquare(board,i,j);
-  //       }
+        if (board[i][j] == c) {
+          explodeSquare(board,i,j);
+        }
         
-  //     }
+      }
       
-  //   }
-  // }
+    }
+  }
 
   //public static void explodeAllChar(char[][] board, char c)
   //{
@@ -400,9 +401,11 @@ public class Array2DPractice
     System.out.println("This is setRow: ");
     setRow(board2, 3, '&');
     printBoard(board2);
-
-    //explodeSquare(board2,1,1); //this uses copyBoard for board2, 1, 1 defines the place
-    //printBoard(board2);
+    System.out.println("This is explodeSquare: ");
+    explodeSquare(board2,1,1); //this uses copyBoard for board2, 1, 1 defines the place
+    printBoard(board2);
+    System.out.println("This is explodeAllChar: ");
+    //explodeAllChar(char[][] board, char c);
     /*
       Note, you can directly set elements in the board
       using array notation like b[3][2]='z' and you
