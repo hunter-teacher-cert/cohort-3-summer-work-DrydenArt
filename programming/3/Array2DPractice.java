@@ -317,11 +317,13 @@ public class Array2DPractice
  
   public static void explodeAllChar(char[][] board, char c)
   {
+    //loop through the board rows
     for (int i=0; i<board.length; i++) {
-
+      
+      //loop through the board cols
       for (int j=0; j<board[0].length; j++) {
         
-        if (board[i][j] == c) {
+        if (board[i][j] == c) {//checks to see if the char at a given location [i][j] is the given character
           explodeSquare(board,i,j);
         }
         
@@ -386,6 +388,17 @@ public class Array2DPractice
   //public static void downString( char[][] board, int row, int col, String word )
   //{
     /* YOUR AWESOME CODE HERE */
+  // public static void setRow( char[][] board, int row, char value )
+  // {
+  //   //for(int r = 0; r < board.length; r++) (don't need this)
+  //     //{
+  //       for(int c = 0; c < board[row].length; c++)
+  //       {
+  //         board[row][c] = value;//this uses the arguments from main to make the changes
+  //       }
+  //     //}
+        
+  // }
   //}
 
 
@@ -397,15 +410,24 @@ public class Array2DPractice
     System.out.println("This is copyBoard: ");
     char [][] board2;//initializes the array for board2
     board2 = copyBoard(board1);//machine goes to get the return from board1 (board2 = assigns a value from copy board1 into board2)
+    
     printBoard(board2);
     System.out.println("This is setRow: ");
     setRow(board2, 3, '&');
     printBoard(board2);
     System.out.println("This is explodeSquare: ");
-    explodeSquare(board2,1,1); //this uses copyBoard for board2, 1, 1 defines the place
-    printBoard(board2);
+    explodeSquare(board1,1,1); //this uses copyBoard for board2, 1, 1 defines the place
+    printBoard(board1);
     System.out.println("This is explodeAllChar: ");
-    //explodeAllChar(char[][] board, char c);
+    char [][] board3 = {{'q', 'q', 'z', 'q', 'q'},
+                        {'q', 'q', 'q', 'q', 'q'},
+                        {'q', 'q', 'q', 'q', 'q'},
+                        {'q', 'q', 'q', 'q', 'q'},
+                        {'q', 'z', 'q', 'q', 'q'},
+                        {'q', 'q', 'q', 'q', 'z'}};
+    //board3 = copyBoard(board1);
+    explodeAllChar(board3, 'z');
+    printBoard(board3);
     /*
       Note, you can directly set elements in the board
       using array notation like b[3][2]='z' and you
