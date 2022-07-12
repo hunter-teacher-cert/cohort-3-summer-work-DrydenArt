@@ -1,0 +1,21 @@
+Exercise 5.1 (page 80)
+
+Rewrite the code using a single if statement:
+
+if (x > 0 && x < 10) {
+    System.out.println("positive single digit number.");
+  }
+}
+
+
+Exercise 5.2 
+1. See Stack Diagram: StackDiagram2.jpg
+
+2. just for
+   any not more
+   It's breakfast
+   !
+
+Exercise 5.3
+1. Draw a stack diagram that shows the state of the program in Section 5.8 after main invokes nLines with the parameter n == 4, just before the last invocation of nLines returns:
+See Stack Diagram: StackDiagram3.JPG
