@@ -123,7 +123,13 @@ public class AlPractice{
   - The parameter ArrayLists should not be modified.
   */
   public static ArrayList<Integer> sumLists(ArrayList<Integer>ListA,ArrayList<Integer>ListB){
-    return null;//placeholder to compile.
+    ArrayList <Integer> ListC = new ArrayList<Integer>();
+    for (int i=0; i< ListA.size(); i++)
+      {
+        ListC.add(ListA.get(i) + ListB.get(i));
+      }
+    
+    return ListC;
   }
 
   /** zipLists
@@ -168,6 +174,7 @@ public static void main(String[] args) {
     removeValue(al,5);
     System.out.println(al); //NOTE:  this was listed as a, not al
 
+    System.out.println(sumLists(al, al));
   }
 
 
