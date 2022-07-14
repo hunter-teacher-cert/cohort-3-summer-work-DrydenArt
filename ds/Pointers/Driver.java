@@ -24,8 +24,11 @@ public class Driver{
     n6.setNext(n3);//n6 is pointing at n3
     n2.setNext(n6);//n2 is now pointing at n6
 
-      //this establishes node n (with the initial value p) as the start of the list 
-      for (Node n = p; n.getNext() != null; n = n.getNext())//going though loop as long as get.Next is not null
+    //n = n.getNext().getNext(); //points n at two nodes down the list
+    //BELOW:
+    //Node n = p; this establishes node n (with the initial value p) as the start of the list 
+    //n != null; while the value of n is not null (the does line 33) then goes to the next...this will allow all the values in the list to be printed
+      for (Node n = p; n != null; n = n.getNext())//going though loop as long as get.Next is not null
         {  
           System.out.println(n.getData());//prints what's in our current node
         }
