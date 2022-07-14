@@ -21,18 +21,18 @@ public class Node{
     this.next = next;
   }
 
-  public String getData(){
+  public String getData(){//gets the data
     return data;
   }
-  public Node getNext(){
+  public Node getNext(){//gets the next node
     return next;
   }
 
-  public void setData(String data){
+  public void setData(String data){//sets the node to the data
     this.data = data;
   }
 
-  public void setNext(Node next){
+  public void setNext(Node next){//points the node to the next node
     this.next = next;
   }
 
