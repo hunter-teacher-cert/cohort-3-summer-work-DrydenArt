@@ -56,8 +56,20 @@ public class Driver2{
 	// Uncomment the next line, compile and run
 	// to test what you just added
 	System.out.println(walker.getData());
-  walker = front;//walker takes the value of front
+  walker = front;//walker takes the value of front, it re-assigns it
 
+  // //The while loop below can also be written as:
+  // //while(walker != null){
+  //     System.out.println(walker.getData());
+  //     walker = walker.getNext();
+  // }
+      
+  // Another option  for the loop below:
+  // while(walker != null){
+  //   System.out.println(walker);this is calling the toString method that prints the data from walker)
+  //   walker = walker.getNext();
+  // }
+      
   while(walker.getNext() != null) {//while the walker is pointing at something
     System.out.println(walker.getData());//prints the data at each node
     walker = walker.getNext();//each time the walker is reassigned to the next node
