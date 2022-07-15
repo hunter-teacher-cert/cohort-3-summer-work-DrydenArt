@@ -84,6 +84,7 @@ public class LinkedList{
 
 
 
+
   /**
   Parameters:
   index - an int with the location to add
@@ -96,8 +97,19 @@ public class LinkedList{
   "a"-> "z" -> "b" -> "c" -> "d"
   */
   public void add(int index, String value){
+    
+  //   Node str = new Node (value); //this is declaring the new node that we have to add
+  //   Node walker = head; //do we need a walker to find the index? and do we start it at the head?  
+ 
+  //   if (int i = 0; i < index; i++){//loops through the list until one before the index
+    
+  //     walker = walker.getNext();//the walker will take the value of the next node - lets the walker move forward through the list
+  //   } str = value + index.setNext();//do I have to assign str to the walker here?
+  //     str = str.getNext();
+    
 
-  }
+   }
+
 
 
   /**
@@ -108,9 +120,9 @@ public class LinkedList{
   "a"->"b"->"c"->"d"->"e"
   indexOf("d") would return 3 since "d" is at location 3.
   */
-  public int indexOf(String value){
-    return 0;
-  }
+  // public int indexOf(String value){
+  //   return 0;
+  // }
 
 
   /**
@@ -120,8 +132,8 @@ public class LinkedList{
   the array.
   */
   public String[] toArray(){
-    return null;
-  }
+     return null;
+   }
 
 
 
@@ -135,7 +147,7 @@ public class LinkedList{
   "a"->"b"->"d"->"e"
   */
   public void remove(int index){
-  }
+   }
 
   
-}
+ }

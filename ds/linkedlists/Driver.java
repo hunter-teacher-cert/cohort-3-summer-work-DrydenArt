@@ -9,6 +9,8 @@ public class Driver{
     l.add("World");
     //l.add("World"); (why does the print flip when I add this here?)
     System.out.println(l.toString());
+    System.out.println("Index 3: " + l.get(3));
+    //System.out.println(l.add(1, "The water's fine!"));
     
   }
 }

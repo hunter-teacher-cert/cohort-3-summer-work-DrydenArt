@@ -1,2 +1,2 @@
 language = "bash"
-run = "cd methods/; javac RallyCross.java; java RallyCross"
+run = "cd ds/linkedlists; javac Driver.java LinkedList.java; java Driver"
