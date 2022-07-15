@@ -2,6 +2,8 @@ import java.io.*;
 import java.util.*;
 
 /**
+Name: Elizabeth Rechtin
+Collaborators: David Moste, Usman Ahmed, Erwin Lara
 For all attempted methods, make sensible decisions for error and
 edge cases (such as indexing out of bounds).
 Basic
@@ -34,7 +36,7 @@ public class LinkedList{
   Adds a new node containing value to the front of the list.
   */
   public void add(String value){
-    head = new Node(value, head);//computer has made some unnamed object and then it and then it looks to the constructor to create it, looks at the value and then points it to head and then reassigns head to look at the newly created node
+    head = new Node(value, head);//computer has made some unnamed object and  then it looks to the constructor to create it, then it looks at the value and points it to head, and then reassigns head to look at the newly created node
 
   }
   /**
@@ -43,7 +45,7 @@ public class LinkedList{
   public String get(int index)
   {
     Node walker = head; //declares the walker as the head of the list
-    for (int i = 0; i < index; i++)
+    for (int i = 0; i < index; i++)//loops through the list
       {
         if (walker == null || index < 0)//this is a safeguard to keep the input inbounds
         {
