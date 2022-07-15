@@ -128,4 +128,15 @@ public class LinkedList{
   */
   public void remove(int index){
   }
+
+  // public static void main(String[] args) {
+  //     LinkedList l1 = new LinkedList();
+  //     l1.add("Hello");
+  //     l1.add("World");
+  //     Node walker = l1.head;
+  //     while (walker != null) {
+  //       System.out.print(walker);
+  //       walker = walker.getNext();
+  //     }
+  //   }
 }
