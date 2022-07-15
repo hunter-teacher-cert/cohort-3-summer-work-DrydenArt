@@ -24,8 +24,8 @@ public class LinkedList{
 
   private Node head;
 
-  public LinkedList(){
-    head = null;
+  public LinkedList(){//this is the constructor
+    head = null;//establishes how the nodes will be made
   }
 
   /**
@@ -34,35 +34,43 @@ public class LinkedList{
   Adds a new node containing value to the front of the list.
   */
   public void add(String value){
-    head = new Node(value, head);//constructs newNode and assigns it value, and points to head
+    head = new Node(value, head);//computer has made some unnamed object and then it and then it looks to the constructor to create it, looks at the value and then points it to head and then reassigns head to look at the newly created node
 
   }
-
   /**
   Returns the String in the node at location index.
   */
   public String get(int index)
   {
-    Node walker = head;
+    Node walker = head; //declares the walker as the head of the list
     for (int i = 0; i < index; i++)
       {
-        if (walker == null || index < 0)
+        if (walker == null || index < 0)//this is a safeguard to keep the input inbounds
         {
-          return("Exception. Out of bounds");
+          return("Exception. Out of bounds.");//error that is returned
         }
         else
         {
-          walker = walker.getNext();
+          walker = walker.getNext();//the walker will take the value of the next node - lets the walker move forward through the list
         }
       }
-    return walker.getData();
+    return walker.getData();//this will return the value or data at that index
   }
 
   /**
   Return a string representation of the list
   */
   public String toString(){
-    return "";
+    Node walker = head;//assigns the walker as a copy of head (gets the value of head and points to next node)
+    String str = "";//declaring the String and it also stores the values from the list
+    
+    while (walker != null) 
+      {//line 69 can also be written: str += walker.toString();
+        str = str + walker.toString();//we are appending the walker's data to the string
+        
+        walker = walker.getNext();//the walker is moving through the list
+      }
+    return str + "null";//once the loop is done, it returns all the data
   }
 
   /**
@@ -126,17 +134,6 @@ public class LinkedList{
   */
   public void remove(int index){
   }
-
-public static void main(String[] args) {
-      LinkedList l1 = new LinkedList();
-      l1.add("Hello");
-      l1.add("World");
-      Node walker = l1.head;
-      while (walker != null) {
-        System.out.print(walker);
-        walker = walker.getNext();
-      }
-    }
 
   
 }
