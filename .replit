@@ -1,2 +1,2 @@
 language = "bash"
-run = "cd ds/linkedlists; javac Driver.java LinkedList.java; java Driver"
+run = "cd programming/sa; javac SuperArrayDriver.java SuperArray.java; java SuperArrayDriver"
