@@ -5,11 +5,15 @@ public class Driver{
   public static void main(String[] args) {
     LinkedList l = new LinkedList();
     //l.add("World");
-    l.add("Hello");
-    l.add("World");
-    //l.add("World"); (why does the print flip when I add this here?)
+    l.add("Elizabeth");
+    l.add("Usman");
+    l.add("David");
+    l.add("Erwin");
+    
+    
     System.out.println(l.toString());
-    System.out.println("Index 3: " + l.get(3));
+    System.out.println("The value at index 3 is: " + l.get(3));
+    System.out.println("The size of the list is: " +l.size());
     //System.out.println(l.add(1, "The water's fine!"));
     
   }

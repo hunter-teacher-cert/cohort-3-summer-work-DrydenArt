@@ -79,7 +79,15 @@ public class LinkedList{
   returns the number of elements in the list
   */
   public int size(){
-    return 0;
+    Node walker = head;
+    int counter = 0;
+
+    while (walker != null)
+      {
+        walker = walker.getNext();
+        counter++;
+      }
+    return counter;
   }
 
 
