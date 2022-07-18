@@ -125,7 +125,17 @@ public class LinkedList{
   */
   public void add(int index, String value)
   {
-    if (index = 0)
+    if (index = 0)//if it's 
+    {
+      this.add(value);
+      return;
+    }
+    else if (index == this.size())//this is the last node
+    {
+      Node n = get_Helper(index -1);//points to "usman"
+      Node p = new Node (value);
+      n.setNext(p);
+    }
     
   //   Node str = new Node (value); //this is declaring the new node that we have to add
   //   Node walker = head; //do we need a walker to find the index? and do we start it at the head?  
