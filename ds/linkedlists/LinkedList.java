@@ -61,19 +61,19 @@ public class LinkedList{
 
   public Node get_Helper(int index)
   {
-    Node walker = head; //declares the walker as the head of the list
-    for (int i = 0; i < index; i++)//loops through the list
+    Node walker = head;
+    for (int i = 0; i < index; i++)
       {
-        if (walker == null || index < 0)//this is a safeguard to keep the input inbounds
+        if (walker == null || index < 0)
         {
-          return null;//error that is returned
+          return null;
         }
         else
         {
-          walker = walker.getNext();//the walker will take the value of the next node - lets the walker move forward through the list
+          walker = walker.getNext();
         }
       }
-    return walker.getData();//this will return the value or data at that index
+    return walker;
   }
     
   

@@ -5,10 +5,10 @@ public class Driver{
   public static void main(String[] args) {
     LinkedList l = new LinkedList();
     //l.add("World");
-    l.add("Elizabeth");
     l.add("Usman");
-    l.add("David");
+    l.add("Elizabeth");
     l.add("Erwin");
+    l.add("David");
     
     
     System.out.println(l.toString());
