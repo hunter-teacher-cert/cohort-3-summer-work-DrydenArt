@@ -14,6 +14,7 @@ public class Driver{
     System.out.println(l.toString());
     System.out.println("The value at index 3 is: " + l.get(3));
     System.out.println("The size of the list is: " +l.size());
+    System.out.println(l.get_Helper(2).toString());
     //System.out.println(l.add(1, "The water's fine!"));
     
   }

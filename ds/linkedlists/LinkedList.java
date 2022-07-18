@@ -59,6 +59,25 @@ public class LinkedList{
     return walker.getData();//this will return the value or data at that index
   }
 
+  public Node get_Helper(int index)
+  {
+    Node walker = head; //declares the walker as the head of the list
+    for (int i = 0; i < index; i++)//loops through the list
+      {
+        if (walker == null || index < 0)//this is a safeguard to keep the input inbounds
+        {
+          return null;//error that is returned
+        }
+        else
+        {
+          walker = walker.getNext();//the walker will take the value of the next node - lets the walker move forward through the list
+        }
+      }
+    return walker.getData();//this will return the value or data at that index
+  }
+    
+  
+
   /**
   Return a string representation of the list
   */
@@ -80,7 +99,7 @@ public class LinkedList{
   */
   public int size(){
     Node walker = head;
-    int counter = 0;
+    int counter = 0;//this extra variable eliminates having to run through the list everytime
 
     while (walker != null)
       {
@@ -104,7 +123,9 @@ public class LinkedList{
   add(1,"z") results in:
   "a"-> "z" -> "b" -> "c" -> "d"
   */
-  public void add(int index, String value){
+  public void add(int index, String value)
+  {
+    if (index = 0)
     
   //   Node str = new Node (value); //this is declaring the new node that we have to add
   //   Node walker = head; //do we need a walker to find the index? and do we start it at the head?  
