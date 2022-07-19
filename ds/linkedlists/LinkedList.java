@@ -193,9 +193,21 @@ public class LinkedList{
   It should then copy all of the values to the array and return
   the array.
   */
-  // public String[] toArray(){
-  //    return null;
-  //  }
+  public String[] toArray()
+  {
+    //make a walker to go over the linked list, set it to the head
+    Node tempWalker = head;
+    //make a String [] of size
+    String[] copy = new String [size()];
+    //for each item in the linked list, until size(), 
+    for (int i = 0; i < size(); i++)
+      {
+        copy[i] = tempWalker.getData(); //set the array at index == linked list at index.
+        tempWalker = tempWalker.getNext();//move the walker onward
+        
+      }
+      return copy;//returns the array values 
+    }
 
 
 

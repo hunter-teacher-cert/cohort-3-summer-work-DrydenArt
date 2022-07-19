@@ -1,2 +1,2 @@
 language = "bash"
-run = "cd ds/sorting; javac SortSearchDriver.java SortSearch.java; java SortSearchDriver"
+run = "cd ds/linkedlists; javac Driver.java LinkedList.java; java Driver"
