@@ -8,14 +8,15 @@ For all attempted methods, make sensible decisions for error and
 edge cases (such as indexing out of bounds).
 Basic
 -----
-add(string value)
-get(int index);
-toString()
++add(string value)
++get(int index);
++toString()
+
 Intermediate (at least add, size + one of the other two)
 ------------
-size()
-add(int index,String value)
-indexOf(String value);
++size()
++add(int index,String value)
++indexOf(String value);
 toArray()
 Challenge
 --------
