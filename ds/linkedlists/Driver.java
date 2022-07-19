@@ -9,12 +9,14 @@ public class Driver{
     l.add("Elizabeth");
     l.add("Erwin");
     l.add("David");
+    l.add("Luca");
     
     
     System.out.println(l.toString());
     System.out.println("The value at index 3 is: " + l.get(3));
     System.out.println("The size of the list is: " +l.size());
     System.out.println(l.get_Helper(2).toString());
+    System.out.println("The index of Usman is: " +l.indexOf("Usman"));
     //System.out.println(l.add(1, "The water's fine!"));
     
   }

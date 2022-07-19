@@ -58,8 +58,9 @@ public class LinkedList{
       }
     return walker.getData();//this will return the value or data at that index
   }
+  
 
-  public Node get_Helper(int index)
+  public Node get_Helper(int index)//this returns the value and the get next (all information held in the node, but we'll only see the value due to the toString method)
   {
     Node walker = head;
     for (int i = 0; i < index; i++)
@@ -125,7 +126,7 @@ public class LinkedList{
   */
   public void add(int index, String value)
   {
-    if (index = 0)//if it's 
+    if (index == 0)//if it's at the beginning
     {
       this.add(value);
       return;
@@ -135,6 +136,14 @@ public class LinkedList{
       Node n = get_Helper(index -1);//points to "usman"
       Node p = new Node (value);
       n.setNext(p);
+    }
+    else
+    {
+      Node previous = get_Helper(index -1);//created variable for previous
+      Node n = new Node (value);//created variable for object that we are adding
+      Node next = get_Helper(index);//created variable for the next node
+      n.setNext(next);//set n to point at next variable
+      previous.setNext(n);//set previous to point at n
     }
     
   //   Node str = new Node (value); //this is declaring the new node that we have to add
@@ -159,9 +168,22 @@ public class LinkedList{
   "a"->"b"->"c"->"d"->"e"
   indexOf("d") would return 3 since "d" is at location 3.
   */
-  // public int indexOf(String value){
-  //   return 0;
-  // }
+  public int indexOf(String value)
+  {
+    Node walker = head;
+    int counter = 0;
+    while (walker != null)
+    {
+      if(walker.getData() != value)
+      {
+        walker = walker.getNext();
+        counter++;
+      }
+      else
+        return counter;
+    }
+     return -1;
+   }
 
 
   /**
@@ -170,9 +192,9 @@ public class LinkedList{
   It should then copy all of the values to the array and return
   the array.
   */
-  public String[] toArray(){
-     return null;
-   }
+  // public String[] toArray(){
+  //    return null;
+  //  }
 
 
 
@@ -185,8 +207,8 @@ public class LinkedList{
   remove(2) results in:
   "a"->"b"->"d"->"e"
   */
-  public void remove(int index){
-   }
+  // public void remove(int index){
+  //  }
 
   
  }
