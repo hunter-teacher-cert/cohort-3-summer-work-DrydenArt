@@ -8,17 +8,17 @@ public class SortSearchDriver {
 	// Uncomment these to test part 1
 	
 	SortSearch ss = new SortSearch(20);
-	System.out.println(ss);
+	System.out.println("This is the random array: \n" + ss +"\n");
 	
 		
 	// Uncomment these to test part 2
 
-	// int i;
-	// i = ss.findSmallestIndex(0);
-	// System.out.println("ss["+ i +"] = "+ss.get(i)+" : " + ss);
+	int i;
+	i = ss.findSmallestIndex(0);
+	System.out.println("ss["+ i +"] = "+ss.get(i)+" : " + ss +"\n");
 
-	// i = ss.findSmallestIndex(3);
-	// System.out.println("ss["+ i + "] = "+ss.get(i)+" : " + ss);
+	i = ss.findSmallestIndex(3);
+	System.out.println("ss["+ i + "] = "+ss.get(i)+" : " + ss);
 	
 	// Uncomment these to test part 3
 

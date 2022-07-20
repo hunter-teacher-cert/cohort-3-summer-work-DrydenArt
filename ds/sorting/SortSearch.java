@@ -5,12 +5,12 @@ import java.util.*;
 
 Sort Project:
 
-+Part 1:  (BASIC)
++Done: Part 1:  (BASIC)
   1. Analyze the two constructors - try to figure out how they work.
   2. Compile and run the program (SortProjectDriver.java and SortProject.java) and confirm
   the behavior of the constructors.
 
-  Part 2: (BASIC)
++Done: Part 2: (BASIC)
   1. Read the description of findSmallestIndex and complete the method.
   2. Uncomment the lines in SortProjectDriver to test.
 
@@ -35,28 +35,29 @@ public class SortSearch{
     
     private Random r; 
 
-    
-    public SortSearch(){//defaulted constructor, doesn't take any parameters
-	data = new ArrayList<Integer>();//data is an array list of integers
-	r = new Random();//randomly populates the array list with 15 numbers ranging from 0 -19
-	for (int i = 0;i < 15; i++){
-	    data.add(r.nextInt(20));//this indicates the array from 0 - 19 (not including 20)
-	}
+    //defualt constructor: populate the ArrayList with 15 random numbers ranging from 0 to 19. [4, 18, 12, 9, 0, 12, 9, 9, 8, ]
+    public SortSearch(){
+    	data = new ArrayList<Integer>();
+    	r = new Random();
+    	for (int i = 0; i < 15 ; i++){
+    	    data.add(r.nextInt(20)); //random integers from 0 to 19. 
+	    }
 	
     }
-    
-    public SortSearch(int size){//overloaded constructor, the one that we do have information for (parameters)
-	data = new ArrayList<Integer>();
-	r = new Random();
-	for (int i = 0;i < size; i++){//the array will be populated with a given number (set in main)
-	    data.add(r.nextInt(20));
-	}
+
+    //overloaded constructor(with parameters): populate the ArrayList with given number(size) of random numbers ranging from 0 to 19.
+    public SortSearch(int size){
+    	data = new ArrayList<Integer>();
+    	r = new Random();
+    	for (int i = 0; i < size; i++){
+    	    data.add(r.nextInt(20));
+	    }
 	
     }
 
     /* Convenience function to get data out of the ArrayList from the driver */
     public int get(int index){
-	return this.data.get(index);
+	    return this.data.get(index);
     }
     
 
@@ -67,31 +68,28 @@ public class SortSearch{
       return any of them.
       
       Example, if the arraylist has:
-      5,2,     10,6,8
-      findSmallestIndex(2)
-      if start was 2 (start at index 2, value 10) then it would return 3
-      which is the index of the value 6 which is the index with the
+      5,2,       10,6,8
+      findSmallestIndex(2);
+      if start was 2 (start at index 2, value 10) then it would return 3 which is the index of the value 6 which is the index with the
       smallest value from start to end
 
       On the otherh and, if start was 0, then the method would
       return 1 since the value 3 is in index 1 and that is the smallest.
       
     */
-    public int findSmallestIndex(int start)
-    {
-	    int smallIndex = start;
-      int currSmall = this.data.get(start);//makes this variable to hold the smallest value as we traverse the array
-
-      //iterate through the ArrayList starting from start to this.data.size()
-      for(int i = start; i <= data.size(); i++)
-      {
-        if (data.get(i) < currSmall)
-        {
-          i = currSmall;//the index becomes the currSmall
+    //we don't need the int currSmall if we want to shorten code
+    public int findSmallestIndex(int start){
+    	int smallIndex = start;
+      int currSmall = this.data.get(start); //instantiate another variable to hold the current smallest value
+    	//iterate through the ArrayList starting from start to this.data.size()
+      for(int i = start; i < data.size(); i++){
+        if(data.get(i) < currSmall){
+          currSmall = data.get(i);
+          smallIndex = i;
         }
-      }else
-	
-	return smallIndex;
+      }
+      //compare each item with the current smallest value and update the current smallest value 
+    	return smallIndex;//at this point, it will only return the index of the smallest value, not move it
     }
 
 
@@ -109,7 +107,19 @@ public class SortSearch{
        
 
     */
-    public void sort(){
+    public void sort()//can we call findSmallestIndex?
+  {//iterate through the data starting at zero to the end
+    for(int i = 0; i < data.size(); i++)
+      {
+        int temp = data.get(i);
+        int minIndex = findSmallestIndex(i);
+        int minValue = this.data.get(minIndex);
+        
+        int orig = dataList.get(index1);//stores the value at index1
+      dataList.set(index1, dataList.get(index2));//moves the value from index2 to index1
+      dataList.set(index2, temp1);//moves the stored value of index1 to index2
+      }
+      
 
 
     }
