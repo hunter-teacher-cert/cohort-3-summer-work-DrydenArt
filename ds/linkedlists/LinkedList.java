@@ -3,7 +3,7 @@ import java.util.*;
 
 /**
 Name: Elizabeth Rechtin
-Collaborators: David Moste, Usman Ahmed, Erwin Lara
+Collaborators: David Moste, Usman Ahmed, Erwin Lara, with additional help from office hours
 For all attempted methods, make sensible decisions for error and
 edge cases (such as indexing out of bounds).
 Basic
