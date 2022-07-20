@@ -14,7 +14,7 @@ Sort Project:
   1. Read the description of findSmallestIndex and complete the method.
   2. Uncomment the lines in SortProjectDriver to test.
 
-  Part 3: (INTERMEDIATE)
++DONE: Part 3: (INTERMEDIATE)
   1. Complete the sort method - read comments for description
   2. Uncomment the lines in sortProjectDriver to test.
 
@@ -108,16 +108,17 @@ public class SortSearch{
 
     */
     public void sort()//can we call findSmallestIndex?
-  {//iterate through the data starting at zero go sto the end
-    for(int i = 0; i < data.size(); i++)
-      {
-        int temp = data.get(i);//stores the value at index
-        int minIndex = findSmallestIndex(i);//calls fSI method and assigns the smallest index to minIndex variable
-        data.set(i, data.get(minIndex));
+  {//iterate throught the data(A.L.) starting from 0 to data.size() 
+      //update the findSmallestIndex arguement
+      int temp = 0;
+      int minIndex = 0;
+      
+      for(int i = 0; i < data.size(); i++){
+        minIndex = findSmallestIndex(i); //
+        temp = data.get(minIndex); //assigning 5 to temp 
+        data.set(minIndex,data.get(i));
+        data.set(i, temp);
         
-        int temp = dataList.get(index1);//stores the value at index1
-      dataList.set(index1, dataList.get(index2));//moves the value from index2 to index1
-      dataList.set(index2, temp1);//moves the stored value of index1 to index2
       }
       
 
