@@ -108,14 +108,14 @@ public class SortSearch{
 
     */
     public void sort()//can we call findSmallestIndex?
-  {//iterate through the data starting at zero to the end
+  {//iterate through the data starting at zero go sto the end
     for(int i = 0; i < data.size(); i++)
       {
-        int temp = data.get(i);
-        int minIndex = findSmallestIndex(i);
-        int minValue = this.data.get(minIndex);
+        int temp = data.get(i);//stores the value at index
+        int minIndex = findSmallestIndex(i);//calls fSI method and assigns the smallest index to minIndex variable
+        data.set(i, data.get(minIndex));
         
-        int orig = dataList.get(index1);//stores the value at index1
+        int temp = dataList.get(index1);//stores the value at index1
       dataList.set(index1, dataList.get(index2));//moves the value from index2 to index1
       dataList.set(index2, temp1);//moves the stored value of index1 to index2
       }
