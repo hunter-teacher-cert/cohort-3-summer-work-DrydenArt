@@ -139,7 +139,20 @@ public class SortSearch{
        This algorithm works on any ArrayList.
 
     */
-    public int linearSearch(int value){
+    public int linearSearch(int value)
+    {
+      int foundIndex = -1;//this returns a -1 if not found
+  
+    for (int i=0; i < data.size(); i++) 
+    {
+      int element = data.get(i);
+      if (element == value) 
+      {
+        foundIndex = i;
+        break;
+      }
+    }
+    return foundIndex;
 	
 	
 	return 0; // replace this return
