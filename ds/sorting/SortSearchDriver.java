@@ -15,14 +15,14 @@ public class SortSearchDriver {
 
 	int i;
 	i = ss.findSmallestIndex(0);
-	System.out.println("ss["+ i +"] = "+ss.get(i)+" : " + ss +"\n");
+	System.out.println("This is findSmallestIndex: \n"+"ss["+ i +"] = "+ss.get(i)+" : \n" + ss +"\n");
 
 	i = ss.findSmallestIndex(3);
-	System.out.println("ss["+ i + "] = "+ss.get(i)+" : " + ss);
+	System.out.println("This is findSmallestIndex: \n" +"ss["+ i + "] = "+ss.get(i)+" : " + ss);
 	
 	// Uncomment these to test part 3
 
-	System.out.println(ss);
+	//System.out.println(ss);
 	ss.sort();
 	System.out.println("\n" + "This is the array sorted: " +ss);
 

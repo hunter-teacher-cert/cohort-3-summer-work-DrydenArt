@@ -154,8 +154,6 @@ public class SortSearch{
     }
     return foundIndex;
 	
-	
-	//return 0; // replace this return
     }
     
     /**
@@ -171,32 +169,55 @@ public class SortSearch{
       int middle = (high + low) /2;
       
 	// while we're not done:
-      while (data.get(middle) != value && high - low != 1)
-	//   if the item is at data.get(middle), return middle
-      if (data.get(middle) == value)
+      while (true)
       {
-        return middle;
+        if (data.get(middle) == value)
+        {
+          return middle;
+        }
+        else if (value < data.get(middle))
+        {
+          high = middle -1;
+        }
+        else if (high <= low)
+        {
+          return -1; 
+        }
+        else
+        {
+          low = middle +1;
+          
+        }
+        middle = (low + high) /2;
       }
-      else if (data.get(middle) < value)
-      {
-        high = middle - 1;
-        middle = (high + low) /2;
-      }
-	//   otherwise, update high, low, and middle
-      else 
-      {
-        low = middle + 1;
-        middle = (high + low) /2; 
-      }
-	    if (high - low == 1 && data.get(middle) != value) 
-      {
-        return -1;
-      }else 
-      {
-        return middle;
-      }
+  }     
+//       while (low <= data.get(middle) && data.get(middle) <= high){
+// 	//   if the item is at data.get(middle), return middle
+//       if (data.get(middle) == value)
+//       {
+//         return middle;
+//       }
+//       else if (data.get(middle) < value)
+//       {
+//         high = middle - 1;
+//         middle = (high + low) /2;
+//       }
+// 	//   otherwise, update high, low, and middle
+//       else 
+//       {
+//         low = middle + 1;
+//         middle = (high + low) /2; 
+//       }
+// 	    // if (high - low == 1 && data.get(middle) != value) 
+//      //  {
+        
+//       }//else 
+//       return -1;
+// // {
+//       //   return middle;
+//       // }
 	    
-    }
+
     
     /**
        Implement a RECURSIVE binary search as specified by the comments
