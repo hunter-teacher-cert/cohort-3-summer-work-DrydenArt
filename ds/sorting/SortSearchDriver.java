@@ -36,8 +36,9 @@ public class SortSearchDriver {
   System.out.println("\n" +"This is binary search looking for the index of value 12: " + ss.binarySearch(12));
 
   System.out.println("\n" +"This is binary search looking for the index of value 15: " + ss.binarySearch(15));
+      
   //this shows that sort is exponential, that the larger the array size, the longer it takes to run/compile
-  int size = 100000;
+  int size = 1000;//ran it with 1000, 10000, and 100000 and compared the elapsed time
 
 	SortSearch ss2 = new SortSearch(size);
 
