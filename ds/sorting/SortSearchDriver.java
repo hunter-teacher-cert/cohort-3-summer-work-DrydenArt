@@ -24,8 +24,17 @@ public class SortSearchDriver {
 
 	System.out.println(ss);
 	ss.sort();
-	System.out.println(ss);
-	
+	System.out.println("\n" + "This is the array sorted: " +ss);
+
+  System.out.println("\n" + "This is linearSearch looking for the index of value 3: " +ss.linearSearch(3) +"\n");
+      
+  System.out.println("\n" +"This is binary search looking for the index of value 5: " + ss.binarySearch(5));
+
+  System.out.println("\n" +"This is binary search looking for the index of value 9: " + ss.binarySearch(9));
+
+  System.out.println("\n" +"This is binary search looking for the index of value 12: " + ss.binarySearch(12));
+
+  System.out.println("\n" +"This is binary search looking for the index of value 15: " + ss.binarySearch(15));
 
 
 	      

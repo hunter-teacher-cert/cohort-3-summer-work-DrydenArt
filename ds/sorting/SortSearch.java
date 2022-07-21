@@ -143,7 +143,7 @@ public class SortSearch{
     {
       int foundIndex = -1;//this returns a -1 if not found
   
-    for (int i=0; i < data.size(); i++) 
+    for (int i = 0; i < data.size(); i++) 
     {
       int element = data.get(i);
       if (element == value) 
@@ -155,7 +155,7 @@ public class SortSearch{
     return foundIndex;
 	
 	
-	return 0; // replace this return
+	//return 0; // replace this return
     }
     
     /**
@@ -165,12 +165,36 @@ public class SortSearch{
     */
     public int binarySearch(int value){
 
-	// create assign variables  representing the high, low and middle indices 
+	// create assign variables  representing the high, low and middle indices
+      int low = 0;
+      int high = data.size() -1;
+      int middle = (high + low) /2;
+      
 	// while we're not done:
+      while (data.get(middle) != value && high - low != 1)
 	//   if the item is at data.get(middle), return middle
+      if (data.get(middle) == value)
+      {
+        return middle;
+      }
+      else if (data.get(middle) < value)
+      {
+        high = middle - 1;
+        middle = (high + low) /2;
+      }
 	//   otherwise, update high, low, and middle
-
-	return 0;
+      else 
+      {
+        low = middle + 1;
+        middle = (high + low) /2; 
+      }
+	    if (high - low == 1 && data.get(middle) != value) 
+      {
+        return -1;
+      }else 
+      {
+        return middle;
+      }
 	    
     }
     
