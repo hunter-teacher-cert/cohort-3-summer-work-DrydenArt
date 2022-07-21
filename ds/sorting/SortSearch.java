@@ -190,32 +190,7 @@ public class SortSearch{
         }
         middle = (low + high) /2;
       }
-  }     
-//       while (low <= data.get(middle) && data.get(middle) <= high){
-// 	//   if the item is at data.get(middle), return middle
-//       if (data.get(middle) == value)
-//       {
-//         return middle;
-//       }
-//       else if (data.get(middle) < value)
-//       {
-//         high = middle - 1;
-//         middle = (high + low) /2;
-//       }
-// 	//   otherwise, update high, low, and middle
-//       else 
-//       {
-//         low = middle + 1;
-//         middle = (high + low) /2; 
-//       }
-// 	    // if (high - low == 1 && data.get(middle) != value) 
-//      //  {
-        
-//       }//else 
-//       return -1;
-// // {
-//       //   return middle;
-//       // }
+  }           
 	    
 
     
@@ -236,7 +211,7 @@ public class SortSearch{
 	
     public String toString(){
 	return ""+data;
-    };
+    }
 
 
     public void builtinSort(){
