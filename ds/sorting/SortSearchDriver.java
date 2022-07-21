@@ -4,8 +4,9 @@ import java.util.*;
 public class SortSearchDriver {
     public static void main(String[] args) {
 
+  
 
-	// Uncomment these to test part 1
+      // Uncomment these to test part 1
 	
 	SortSearch ss = new SortSearch(20);
 	System.out.println("This is the random array: \n" + ss +"\n");
@@ -35,6 +36,23 @@ public class SortSearchDriver {
   System.out.println("\n" +"This is binary search looking for the index of value 12: " + ss.binarySearch(12));
 
   System.out.println("\n" +"This is binary search looking for the index of value 15: " + ss.binarySearch(15));
+  //this shows that sort is exponential, that the larger the array size, the longer it takes to run/compile
+  int size = 100000;
+
+	SortSearch ss2 = new SortSearch(size);
+
+	// printing is really slow so we don't want
+	// to print when testing time.
+	// System.out.println(ss);
+		
+	long start,elapsed;
+
+	start = System.currentTimeMillis();
+	ss2.sort();
+
+	// System.out.println(ss);
+	elapsed = System.currentTimeMillis() - start;
+	System.out.println("Size: " + size + " Time: " + elapsed);
 
 
 	      
