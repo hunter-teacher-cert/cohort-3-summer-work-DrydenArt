@@ -2,7 +2,9 @@ import java.io.*;
 import java.util.*;
 
 /*
-
+Name: Elizabeth Rechtin
+Collaborators:  First team: Jihae Park, Marisa Shuman, Latoya Boland, Second team: Patti Elfers, Wayne Tobias, Shana Henry
+I also stayed for office hours
 Sort Project:
 
 +Done: Part 1:  (BASIC)
@@ -21,8 +23,8 @@ Sort Project:
 
 
 Search Project:
-  1. Complete the linear search (BASIC)
-  2. Complete the binary search (Intermediate)
++DONE:  1. Complete the linear search (BASIC)
++DONE:  2. Complete the binary search (Intermediate)
   3. Complete the recursive version of binary search (Advanced)
 */
 
