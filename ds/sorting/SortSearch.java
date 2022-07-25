@@ -263,9 +263,9 @@ public class SortSearch{
       }
       //above could also use a ternery:
       //int size = list1.size() < list2.size() ? list1.size() : list2.size();
-
+      
       //code for merge: 
-      for (int i = 0; i < size; i++){
+      while (list1.size() != 0 && list2.size() != 0){
         if (list1.get(0) <= list2.get(0)){//compare the first elements in list1 and list2
           list3.add(list1.get(0));
           list1.remove(0);
@@ -275,34 +275,18 @@ public class SortSearch{
           list2.remove(0);
         }//end of else if
       }
- //    //in class demo example:
- //      //create a new arraylist to return
- //      ArrayList<Integer> list3 = new ArrayList<Integer>();
- //      //keep looking at the first items of list 1 and list 2 
- //      //taking the smaller for result
- //      //until we're done
-	// // code for merge
- //      while(list1.size() > 0 && list2.size() > 0){
- //        if(list1.get(0) < list2.get(0)){
- //            //copy list1's first element to merge
- //            merge.add(list1.get(0));
- //            //and remove it from list1
- //            list1.remove(0);
- //        } else {
- //            merge.add(list2.get(0));//copy list2's first element to merge
- //            list1.remove(0); //remove it from list2
- //        }
- //      }
- //      //this will be true until list1 is empty
- //      while(list1.size() > 0){
- //        merge.add(list1get(0));
- //        list1.remove(0);
- //      }//this will be true until list2 is empty
- //      while(list2.size() > 0){
- //        merge.add(list2.get(0));
- //        list2.remove(0);
- //      }
-	// return list3; // returns the new arraylist
+      
+
+      //this will be true until list1 is empty
+      while(list1.size() > 0){
+        list3.add(list1.get(0));
+        list1.remove(0);
+      }//this will be true until list2 is empty
+      while(list2.size() > 0){
+        list3.add(list2.get(0));
+        list2.remove(0);
+      }
+	 return list3; // returns the new arraylist
     }//end of method
     
 }//end of class

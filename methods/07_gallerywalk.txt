@@ -1,0 +1,34 @@
+First Last
+Methods Summer 2022
+GALLERY TOUR LOG
+
+
+USAGE OF TOP SECTION: 
+* Fill in discoveries etc section as you go, or after your is complete.
+* Replicate the 
+* Delete these instructions once read.
+====================================================
+DISCOVERIES:
+* I learned that I can create html and css in replit from Marisa Shuman
+* I learned how to insert a block of code from Kate Maschmeyer.
+*Kate M. and Sam L. helped me fix my link - I had too much of the file location, I just needed the file name. 
+*Kate M. took us on an amazing tour of how she uses Replit and GitHub when designing lessons and distributing them with her students.  It was amazing!  
+
+
+LINGERING QUESTIONS:
+* I feel a little overwhelmed sometimes when I see these amazing resources from all the very experienced teachers.  It's hard to know where to start.
+
+
+COMMENTS/CONCERNS/OTHER:
+* 1 per line, please
+====================================================
+
+
+USAGE OF BOTTOM SECTION: 
+* For any site you deem notable, add an entry using the format below
+====================================================
+notable site: Kate Maschmeyer
+https://kmaschm.github.io/nycscertweb/
+notable aspect: It's organized and easy to read
+I enjoy the way she included her code blocks.
+-------------------------------------
