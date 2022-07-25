@@ -276,7 +276,6 @@ public class SortSearch{
         }//end of else if
       }
       
-
       //this will be true until list1 is empty
       while(list1.size() > 0){
         list3.add(list1.get(0));
