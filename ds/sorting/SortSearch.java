@@ -221,6 +221,88 @@ public class SortSearch{
 	
     }
     
+/* Merge Sort Stuff after here */
+    /**
+       Builds and returns an ArrayList that's already in increasing order.
+       You can use this method to test your merge method.
+    */
+    public ArrayList<Integer> buildIncreasingList(int size){
+	ArrayList<Integer>  newlist = new ArrayList<Integer>();
+	Random r = new Random();
+	int nextval = r.nextInt(20)+1;
+	for (int i=0;i<size;i++){
+	    newlist.add(nextval);
+	    nextval = nextval + r.nextInt(20);
+	}
 
+	return newlist;
+	}
+
+    /**
+       this routine should create and return a new ArrayList of
+       integers and fill it by merging list1 and list2 into the new
+       list.
+       list1 and list2 are already sorted in increasing order.
+       Example:
+       If list1 contains [1,5,17,25]
+       and list2 contains [3,6,10,30,40,50]
+       The new list will contain:
+       [1, 3, 5, 6, 10, 17, 25, 30, 40, 50]
+       
+    */
+       
+    public ArrayList<Integer> merge(ArrayList<Integer> list1, ArrayList<Integer> list2){
+      //create a new arraylist to return
+      ArrayList<Integer> list3 = new ArrayList<Integer>();
+      //see which list is shorter:
+      int size = 0;
+      if(list1.size() < list2.size()){
+        size = list1.size();
+      } else {
+        size = list2.size();
+      }
+      //above could also use a ternery:
+      //int size = list1.size() < list2.size() ? list1.size() : list2.size();
+
+      //code for merge: 
+      for (int i = 0; i < size; i++){
+        if (list1.get(0) <= list2.get(0)){//compare the first elements in list1 and list2
+          list3.add(list1.get(0));
+          list1.remove(0);
+        }//end of if
+        else if (list2.get(0) < list1.get(0)){
+          list3.add(list2.get(0));
+          list2.remove(0);
+        }//end of else if
+      }
+ //    //in class demo example:
+ //      //create a new arraylist to return
+ //      ArrayList<Integer> list3 = new ArrayList<Integer>();
+ //      //keep looking at the first items of list 1 and list 2 
+ //      //taking the smaller for result
+ //      //until we're done
+	// // code for merge
+ //      while(list1.size() > 0 && list2.size() > 0){
+ //        if(list1.get(0) < list2.get(0)){
+ //            //copy list1's first element to merge
+ //            merge.add(list1.get(0));
+ //            //and remove it from list1
+ //            list1.remove(0);
+ //        } else {
+ //            merge.add(list2.get(0));//copy list2's first element to merge
+ //            list1.remove(0); //remove it from list2
+ //        }
+ //      }
+ //      //this will be true until list1 is empty
+ //      while(list1.size() > 0){
+ //        merge.add(list1get(0));
+ //        list1.remove(0);
+ //      }//this will be true until list2 is empty
+ //      while(list2.size() > 0){
+ //        merge.add(list2.get(0));
+ //        list2.remove(0);
+ //      }
+	// return list3; // returns the new arraylist
+    }//end of method
     
-}
+}//end of class
