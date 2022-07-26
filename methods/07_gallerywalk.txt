@@ -1,17 +1,14 @@
-First Last
+Elizabeth Rechtin
 Methods Summer 2022
 GALLERY TOUR LOG
 
 
-USAGE OF TOP SECTION: 
-* Fill in discoveries etc section as you go, or after your is complete.
-* Replicate the 
-* Delete these instructions once read.
+
 ====================================================
 DISCOVERIES:
-* I learned that I can create html and css in replit from Marisa Shuman
+* I learned that I can create html and css in replit from Marisa Shuman, and then push it to GitHub the way we have been all year.  
 * I learned how to insert a block of code from Kate Maschmeyer.
-*Kate M. and Sam L. helped me fix my link - I had too much of the file location, I just needed the file name. 
+*Kate M. and Sam L. helped me fix my page links - I had too much of the file location, I just needed the file name. 
 *Kate M. took us on an amazing tour of how she uses Replit and GitHub when designing lessons and distributing them with her students.  It was amazing!  
 
 
@@ -20,7 +17,10 @@ LINGERING QUESTIONS:
 
 
 COMMENTS/CONCERNS/OTHER:
-* 1 per line, please
+* Color on a website is very appealing and inviting.  This is a good argument for working with html/css rather than strictly GitHub pages.
+* The site navigation needs to be intuitive.
+* It's important that the content is organized in a way that isn't overwhelming.
+* Simplicity and clarity is a good way to empower students to find things on their own. 
 ====================================================
 
 
@@ -28,7 +28,19 @@ USAGE OF BOTTOM SECTION:
 * For any site you deem notable, add an entry using the format below
 ====================================================
 notable site: Kate Maschmeyer
-https://kmaschm.github.io/nycscertweb/
-notable aspect: It's organized and easy to read
+https://kmaschm.github.io/nycscertweb/  and
+https://cs-and-coding-spring-2022-6a.katemaschmeyer.repl.co/
+notable aspect: It's organized and easy to read.
 I enjoy the way she included her code blocks.
+The link for her students looks fun, organized, and easy to use.
 -------------------------------------
+notable site: Jenna Lin
+https://sites.google.com/whbschools.org/linj/
+notable aspect: It's beautiful and inviting - colors and shapes that are irristible
+Also: while the site is colorful, it's not messy or distracting.
+Simple and clear with intuitive navigation.
+-------------------------------------
+notable site: Greg Sciame
+https://sites.google.com/a/hstat.org/10sep1617/p5js
+notable aspect: easy to navigate, super organized.
+This site looks more grown-up due to the more streamlines interface
