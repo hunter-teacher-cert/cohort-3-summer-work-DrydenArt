@@ -15,6 +15,7 @@ DISCOVERIES:
 LINGERING QUESTIONS:
 * I feel a little overwhelmed sometimes when I see these amazing resources from all the very experienced CS teachers.  
 * It's hard to know where to start.
+* I realize neither of these are questions, per se, but one big lingering question in my head.
 
 
 COMMENTS/CONCERNS/OTHER:
