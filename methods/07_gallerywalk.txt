@@ -62,3 +62,10 @@ https://marieke-thomas.github.io/nycscertweb/
 notable aspects:  the CS jokes she added
 Also: I think it's important to create that "inside joke" culture within a group of students to make everyone feel connected.  
 And, also, it's better to laugh than to cry in CS
+-------------------------------------
+notable sites: Wayne Tobias
+https://waynetobias.github.io/nycscertweb/
+notable aspects:  fun and encouraging right from the start
+Also:  love the drawing/code diagram he included
+as well as the animation we were shown during Programming
+-------------------------------------
