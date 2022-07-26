@@ -254,15 +254,6 @@ public class SortSearch{
     public ArrayList<Integer> merge(ArrayList<Integer> list1, ArrayList<Integer> list2){
       //create a new arraylist to return
       ArrayList<Integer> list3 = new ArrayList<Integer>();
-      //see which list is shorter:
-      int size = 0;
-      if(list1.size() < list2.size()){
-        size = list1.size();
-      } else {
-        size = list2.size();
-      }
-      //above could also use a ternery:
-      //int size = list1.size() < list2.size() ? list1.size() : list2.size();
       
       //code for merge: 
       while (list1.size() != 0 && list2.size() != 0){
@@ -270,7 +261,7 @@ public class SortSearch{
           list3.add(list1.get(0));
           list1.remove(0);
         }//end of if
-        else if (list2.get(0) < list1.get(0)){
+        else {
           list3.add(list2.get(0));
           list2.remove(0);
         }//end of else if
@@ -285,7 +276,64 @@ public class SortSearch{
         list3.add(list2.get(0));
         list2.remove(0);
       }
+      System.out.println("merged! " + list3);
 	 return list3; // returns the new arraylist
     }//end of method
+
+  public ArrayList<Integer> mergeSort(ArrayList<Integer> list){
+
+      // check for base case
+    if (list.size() < 2){
+      return list;
+    } else { // if not the base case
+      
+      // // split in two lists
+      // //left should be from 0 to the mid point
+      // ArrayList<Integer> left = new ArrayList<Integer>(); //empty right now
+      // //right should be form mid + 1 to the end
+      // ArrayList<Integer> right = new ArrayList<Integer>(); //empty right now
+      
+      // for(int i = 0; i < list.size()/2; i++){//left side split
+      //   left.add(list.get(i));
+      // }
+      // for(int i = list.size()/2; i< list.size(); i++){//right side split
+      //   right.add(list.get(i));
+      // }
+
+      //using sublist to split the lists
+      //ArrayList implements the List class, getting some of its functions?
+      //the subList function of an arraylist returns a new List object, not a new ArrayList
+      //BUT an arraylist can be constructed by a List obj.
+      //List<Integer> listL = list.subList(0, list.size()/2);
+      //List<Integer> listR = list.subList(list.size()/2, list.size());
+      //ArrayList<Integer> left = new ArrayList<Integer>(listL); //new ArrayList from a List obj
+      //ArrayList<Integer> right = new ArrayList<Integer>(listR);
+
+      //ONE LINE WORKS!--this is amazing, Adam!!
+      ArrayList<Integer> left = new ArrayList<Integer>(list.subList(0, list.size()/2));
+      ArrayList<Integer> right = new ArrayList<Integer>(list.subList(list.size()/2, list.size()));
+      
+      //Testing out split
+      System.out.println("left: " + left);
+      System.out.println(left.size());
+      System.out.println("right: " + right);
+      System.out.println(right.size());
+      
+      //ArrayList<Integer> left = list.sublist(0, list.size()/2); //doesn't work
+  
+      left = mergeSort(left); // meregSort the left half
+      right = mergeSort(right); // mergeSort the right half
+
+      // merge them together into a new list, means call the merge function that we wrote!
+      return merge(left, right);
+    }
+      // return that new list 
+      //return list; //change this
+  }
+
+
+  public void msort(){
+      data =  mergeSort(data);
+  }
     
 }//end of class

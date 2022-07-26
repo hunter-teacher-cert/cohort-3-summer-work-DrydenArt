@@ -61,22 +61,25 @@ public class SortSearchDriver {
 	// System.out.println("\nSize: " + size + " Time: " + elapsed);
 
   //testing the merge of two sorted arrays
+ //  int size = 1000;
+ //  SortSearch ss = new SortSearch(size);
 
-  int size = 1000;
-  SortSearch ss = new SortSearch(size);
+ //  ArrayList<Integer> list1 = ss.buildIncreasingList(4);
+	// System.out.println(list1);
 
-  ArrayList<Integer> list1 = ss.buildIncreasingList(4);
-	System.out.println(list1);
-
-	// build a second Arralist here
-	ArrayList<Integer> list2 = ss.buildIncreasingList(6);
-  System.out.println(list2);
+	// // build a second Arralist here
+	// ArrayList<Integer> list2 = ss.buildIncreasingList(6);
+ //  System.out.println(list2);
 
 
-	// test your merge routine here
-	ArrayList<Integer> list3 = ss.merge(list1, list2 );
-  System.out.println(list3);
-      
+	// // test your merge routine here
+	// ArrayList<Integer> list3 = ss.merge(list1, list2 );
+ //  System.out.println(list3);
 
-    }
+    int size = 5;
+    SortSearch ss = new SortSearch(size);
+    System.out.println(ss); //prints unsorted array
+    ss.msort(); //does the merge sort of this array.
+    System.out.println(ss); //prints array after it is sorted
+  }
 }
