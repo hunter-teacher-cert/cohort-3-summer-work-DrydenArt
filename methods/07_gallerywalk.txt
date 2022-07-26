@@ -6,14 +6,15 @@ GALLERY TOUR LOG
 
 ====================================================
 DISCOVERIES:
-* I learned that I can create html and css in replit from Marisa Shuman, and then push it to GitHub the way we have been all year.  
+* I learned that I can create html and css files in replit from Marisa Shuman, and then push it to GitHub the way we have been all year.  
 * I learned how to insert a block of code from Kate Maschmeyer.
-*Kate M. and Sam L. helped me fix my page links - I had too much of the file location, I just needed the file name. 
-*Kate M. took us on an amazing tour of how she uses Replit and GitHub when designing lessons and distributing them with her students.  It was amazing!  
+*Kate M. and Sam Lojacono helped me fix my page links - I had too much of the file location, I just needed the file name. 
+*Kate M. took us on an amazing tour of how she uses Replit and GitHub when designing lessons and distributing them with her students.  It was amazing!  I provided her additional link below.  
 
 
 LINGERING QUESTIONS:
-* I feel a little overwhelmed sometimes when I see these amazing resources from all the very experienced teachers.  It's hard to know where to start.
+* I feel a little overwhelmed sometimes when I see these amazing resources from all the very experienced CS teachers.  
+* It's hard to know where to start.
 
 
 COMMENTS/CONCERNS/OTHER:
@@ -24,8 +25,7 @@ COMMENTS/CONCERNS/OTHER:
 ====================================================
 
 
-USAGE OF BOTTOM SECTION: 
-* For any site you deem notable, add an entry using the format below
+NOTABLE SITES: 
 ====================================================
 notable site: Kate Maschmeyer
 https://kmaschm.github.io/nycscertweb/  and
@@ -39,8 +39,26 @@ https://sites.google.com/whbschools.org/linj/
 notable aspect: It's beautiful and inviting - colors and shapes that are irristible
 Also: while the site is colorful, it's not messy or distracting.
 Simple and clear with intuitive navigation.
+https://jenna0704.github.io/nycscertweb/
+notable aspect: the checklist is really nice.  Could use for standards met within each lesson (as a way to inform students, and a way to connect to admin)
 -------------------------------------
 notable site: Greg Sciame
 https://sites.google.com/a/hstat.org/10sep1617/p5js
 notable aspect: easy to navigate, super organized.
-This site looks more grown-up due to the more streamlines interface
+This site looks more grown-up due to the more streamlined interface.
+This site has a ton of information, not only for students to access each lesson, but also to access/use the resources afterwards.
+-------------------------------------
+notable site: David Moste
+https://dmoste.github.io/nycscertweb/
+notable aspect:  simplicity, but with a fun aspect that doesn't interfere with or distract from the content.
+-------------------------------------
+notable sites: Adam Driggers
+https://awdriggs.github.io/nycscertweb/
+notable aspect: the animation clips included.  
+Also: Showing animations with content can help scaffold understanding of content, or at least give a sneak peak of the product/possiblites of coding
+-------------------------------------
+notable sites: Marike Thomas
+https://marieke-thomas.github.io/nycscertweb/
+notable aspects:  the CS jokes she added
+Also: I think it's important to create that "inside joke" culture within a group of students to make everyone feel connected.  
+And, also, it's better to laugh than to cry in CS
