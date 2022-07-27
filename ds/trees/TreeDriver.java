@@ -1,6 +1,7 @@
 public class TreeDriver{
   public static void main(String[]args){
-
+    //Group: Elizabeth Rechtin, Alana Robinson, Christopher deSilva and Adam Driggers
+      
     //1. Test out single value trees. They are the base case and
     //should be tested first!
     //2. Uncomment the 'Trees with children' section
