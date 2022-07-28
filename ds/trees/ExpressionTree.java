@@ -3,9 +3,17 @@ public class ExpressionTree{
 
     //You must write this method:
     //Calculate the value of the entire tree
+    //example tree (1.0 + 2.0)
     public double evaluate(){
-      return 10000000000000.0;//replace this
-      //we can call the apply() inside this method
+      //base case, one variable, return the value!
+      if(isValue() == true){
+          return value; //returns a double
+      } else {
+        //a recursive function has to call itself to be recursive!!!
+        //so we must make a call to evaluate!
+        return apply(left.evaluate(), right.evaluate(),operator);
+      }
+      //left.value --> won't work because value is a private variable.
     }
 
     //You must write this method:
@@ -18,13 +26,23 @@ public class ExpressionTree{
     //"(12.5*(5.0-8.0)) //a tree that is the product of the previous two example trees
     //"(((2.0+1.0)/(8.0*0.43)) - 1.0)" //a tree with more
     public String toString(){
-      if(isValue() == true){
+      if(isValue() == true){//base case
         return value +"";//forces it to be a String
       }else{
         return "(" + left + " " + operator + " " + right + ")";
-      }
+      }//again, forcing it to be a string. Also, the left and right, is implicitly calling left.toString and right.toString even if you don't call it, Java will do it for you
      
     }
+
+    public String toStringPrefix(){//prefix
+      if (isValue() == true){
+        //return value+""; //force it to be a string! implicit cast to string
+        return Double.toString(value); //the object double has a toString method.
+      } else {
+        return "(" + operator + " " + left.toStringPrefix() + " " + right.toStringPrefix() + ")";
+        //this is recursive left.toStringPrefix() & rigth.toStringPrefix()
+      }
+  }
 
 
 
@@ -67,10 +85,14 @@ public class ExpressionTree{
     return a-b;
    }else if(op == '*'){
     return a*b;
+   }else if (op =='^'){
+    return Math.pow(a,b);
    }else{ //  if(op == '/'){ //or any invalid operators
     return a/b;
    }
 
   }
+
+  
 
  }

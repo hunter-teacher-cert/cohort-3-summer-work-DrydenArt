@@ -14,9 +14,27 @@ public class TreeDriver{
     System.out.println(one);
     ExpressionTree two = new ExpressionTree(2.0);//one level tree
     System.out.println(two);
+    ExpressionTree three = new ExpressionTree(3.0);
     ExpressionTree result = new ExpressionTree('+', one, two); //two level tree
     System.out.println(result);
-    
+    System.out.println(result.evaluate()); // should print 3
+    System.out.println(result.toStringPrefix());
+    ExpressionTree a = new ExpressionTree('-',result,three);
+    System.out.println(a); //((1.0 + 2.0) - 3)
+    System.out.println(a.evaluate()); // should print 0
+    System.out.println(a.toStringPrefix());
+
+    //Math library is auto imported! Just a part of java
+    //System.out.println(Math.pow(2,2)); //should print 4
+    //Testing Pow
+    ExpressionTree pow = new ExpressionTree('^', two, three);
+    System.out.println(pow);
+    System.out.println(pow.evaluate()); //should print 8
+
+    //two level
+    ExpressionTree pow2 = new ExpressionTree('^', result, three);
+    System.out.println(pow2);
+    System.out.println(pow2.evaluate()); //should print 27
     // ExpressionTree three = new ExpressionTree(3.0);
     // ExpressionTree four = new ExpressionTree(4.0);
     // ExpressionTree five = new ExpressionTree(5.0);
