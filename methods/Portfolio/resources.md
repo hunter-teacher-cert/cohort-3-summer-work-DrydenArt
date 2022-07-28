@@ -17,3 +17,15 @@
 * From Saranii Muller's collab presentation:
   * Codesters (uses Python)
   * https://www.codesters.com/?lang=en
+
+* P5.js Website:
+  * https://p5js.org/
+
+* Processing Foundation:
+  * https://processingfoundation.org/
+
+* Processing (Java):
+  * https://processing.org/
+
+* Processing (Python):
+  * https://py.processing.org/ 
