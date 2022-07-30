@@ -2,15 +2,15 @@
 ## Student Audience  
 * Digital Media Arts, Foundation Level Art Course
 * Grades 9 - 12, predominantly 9th and 10 graders
-* Class Duration: 38 minutes
+* Class Duration: 38 minutes :hankey:
 
 ## Pedagogical Techniques
-* Unplugged activities / Silent, independent thinking / Small group 
+* Unplugged activities / Silent, independent thinking / Small group / 
 Diagramming / Deliverable  / Student demo
 
 
 ## Objectives
-* Students will predict how a given (unknown) code block works before working with Processing.
+* Students will predict how a given (unknown) code block works.
 * Students will experiment with the setup() and draw() code blocks to determine and define what the information in the code blocks do.
 
 ## Prior Experience 
