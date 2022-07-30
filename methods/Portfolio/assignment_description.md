@@ -13,3 +13,12 @@ Each lesson plan should demonstrate different pedagogical techniques presented d
 The plans can be sequential, or entirely separate.
 
 The completed assignment should be such that the two lesson plans can be given to any computer science teacher and they could deliver the lessons as intended.
+
+### Lesson Plan Rubric
+
+| Element | A |
+| --- | --- | 
+| Clear objective |  Lesson objective is stated and clearly supported by materials. |
+| Use of technique 1   | Technique is well chosen, well delivered and rationale is clear. |
+| Use of technique 2   |  Technique is well chosen, well delivered and rationale is clear. |
+| Supporting materials   |  Supporting materials are present and directly referenced in lesson plan. |
