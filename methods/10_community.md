@@ -59,7 +59,7 @@ This is attractive because...
 * Later on:  if the event generates it's own community anticipation where teams form themselves and practice together, or a network of enthusiasm forms
 
 #### Expected Hurdles and Plans to Overcome
-* ( if any... )
+* resistance from leadership
 
 * * *
 
@@ -106,36 +106,9 @@ This is attractive because...
 * Kate M.'s I am a Robot idea, where students have to provide directions to me and I have to do it.  I already do similar things like this in class to support group culture
 * CS Lunchtime Lab (idea shared by Wayne Tobias)
 
-detail
-specific
-etc
-more prose...
-
-ordered
-list
-of steps...
-Expected Positive Outcomes
-This is attractive because...
-
-reason
-thing
-other thing
-Rollout Timeline
-How long should this take to implement, come to fruition...
-Significant milestones along the way?
-Mechanism for Gauging Efficacy
-How will you know it is working?
-
-Expected Hurdles and Plans to Overcome
-( if any... )
-
-
 * * *
 
 ### Related resources
 * [Games for Change](https://www.gamesforchange.org/)
 * [Cybersecurity Competition](https://picoctf.org/)
-* a story
-* a book
-* name of a person who know a lot
-* etc
+* 
