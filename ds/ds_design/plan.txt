@@ -1,0 +1,7 @@
+Data Structure design challenge
+
+Structure:  ArrayList (data type: person objects)
+
+We need to have some kind of a find method, which seems like a binarySearch would be the most efficient (n log n time)
+
+We'd most often be adding names into the middle, and only rarely would we need to add them to the beginning or ends
