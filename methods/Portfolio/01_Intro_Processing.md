@@ -14,10 +14,10 @@ Diagramming / Deliverable  / Student demo / Student discovery by tinkering
 * Students will experiment with the setup() and draw() code blocks to determine and define what the information in the code blocks do.
 
 ## Prior Experience 
-* Day 1 in [Google Slide Presentation](Introduction_to_Processing).
+* Day 1 :  [Google Slide Presentation](Introduction_to_Processing) and [Slide Deck notes](SlideDeck_notes.md).
 * Unplugged Activity: Students have worked in small groups to write directions on how to make a PBJ, then tested them on the teacher, and worked iteratively to improve their directions.  [[source]](http://static.zerorobotics.mit.edu/docs/team-activities/ProgrammingPeanutButterAndJelly.pdf)
 * Debrief: Students have discussed the differences in the ways computers and people work, the importance of iterative work.
----
+
 ## Warm Up
 * **Question:** In what ways was the PBJ activity like computer programming?
 
