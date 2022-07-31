@@ -6,7 +6,7 @@
 
 ## Pedagogical Techniques
 * Unplugged activities / Silent, independent thinking / Small group / 
-Diagramming / Deliverable  / Student demo
+Diagramming / Deliverable  / Student demo / Student discovery by tinkering
 
 
 ## Objectives
@@ -40,6 +40,7 @@ function draw() {
 ```
 * **Silent Thinking:** Students take 2 - 5 minutes to look at and think about these blocks of code and consider what they think it will do.  Students can jot down their ideas if they choose to.
 * **Teacher:** defines code block and demonstrates how to make comments in code.
+ ---
 * **Small Group:**
   * Students form the same teams from the PBJ activity
   * They are provided with a pieces of paper with the code printed on it with a blank space to the right.
@@ -50,3 +51,11 @@ function draw() {
     * Write comments next to each line indicating what you think the code means/will do.
 * **Quick Team Demo**
   * Students share and compare ideas.
+---
+**TEST IT OUT!**
+  * Student groups go back into teams to test their theories.
+  * Students open the p5.js interface on their own devices and work collaboratively to make changes and to experiment with the code. 
+  * Deliverable:
+    * Create a program that establishes a canvas  500 pixels in height and 700 pixels in width.
+    * Comments in the code should reflect their understanding of which argument controls which.
+    * **Challenge:** create a background that is purple (instead of the default gray). 
