@@ -24,7 +24,7 @@ Diagramming / Deliverable  / Student demo / Student discovery by tinkering
 ## Lesson Content
 * Introduction of what computer programming is with diagramming connections on the board.
 * Go over the terms: programming language, syntax and algorithm.
-* See [vocabulary document](01_Vocabulary.md).
+* See [vocabulary document](Vocabulary.md).
 * Introduce p5.js and it's origins with a diagram of how it connects. See [drawing document](p5_origins.draw).
 ---
 ## Lesson Activity

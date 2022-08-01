@@ -28,4 +28,7 @@
   * https://processing.org/
 
 * Processing (Python):
-  * https://py.processing.org/ 
+  * https://py.processing.org/
+
+* Hello Processing video series:
+  * https://hello.processing.org/editor/
