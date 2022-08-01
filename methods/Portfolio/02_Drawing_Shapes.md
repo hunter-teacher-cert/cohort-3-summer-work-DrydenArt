@@ -36,7 +36,7 @@
 **Unplugged Pair Programming**
 
 **Provide:**  
-* Blank grids double-sided
+* Blank grids double-sided [[see document]](Unplugged_Pair_Programming.md)
 * Manilla folders for hiding their designs from their partner.
 * Pencil/eraser.
 * Given: each square is 10 pixels. The total size of the canvas (grid) is 100 x 100. 
@@ -51,7 +51,7 @@
 
 
 ## **Time to Code:** 
-Write the setup() and draw() code blocks on the board (or show it on a slide).
+Write the setup() and draw() code blocks on the board (or show it on a slide). Note the comments.
 ```p5.js
 function setup() {
   createCanvas(400, 400);
