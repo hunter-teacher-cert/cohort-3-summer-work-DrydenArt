@@ -9,7 +9,7 @@
 
 
 ## Objectives
-* Through short demos, students will share their discoveries about the createCanvas() and background() functions.
+* Through short demos, students will share their discoveries about the setup() with createCanvas() functions, and the draw() with the background() functions.
 * Students will practice using a coordinate system.
 * Students will create a design by writing code for rectangles and ellipses.
 
