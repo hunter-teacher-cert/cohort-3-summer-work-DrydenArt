@@ -19,7 +19,7 @@
   * https://www.codesters.com/?lang=en
     
 * From Kate Mascmeyer's Student site:
-* https://cs-and-coding-spring-2022-6a.katemaschmeyer.repl.co/
+  * https://cs-and-coding-spring-2022-6a.katemaschmeyer.repl.co/
 
 * P5.js Website:
   * https://p5js.org/
