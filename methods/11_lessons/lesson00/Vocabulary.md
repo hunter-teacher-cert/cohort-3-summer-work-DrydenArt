@@ -18,6 +18,6 @@
 * **RGB:**
 * **Coordinate system:** a system the computer uses to determine location. Each pixel on the screen uses two numbers, the x coordinate refers to horizontal and y refers to vertical.
 * **Function:** a command, or set of instructions to tell the computer to perform a task. 
-* **Parameters:** instructions on how a function is executed. With our rect(), the parameters are x, y, w, h. Also known as variables. 
+* **Parameters:** instructions on how a function is executed. With  rect(), the parameters are x, y, w, h. Also known as variables. 
 
 

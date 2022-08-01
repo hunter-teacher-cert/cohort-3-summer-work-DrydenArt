@@ -56,7 +56,7 @@ Work collaboratively to make changes and experiment with the code.
   Deliverable:
 Create a program that makes a canvas  500 pixels high, 700 pixels wide.
 Comments in the code should reflect your understanding of which argument controls which.
-Challenge: create a background that is purple.
+* **Challenge:** create a background that is purple (instead of the default gray). Question:  What are you doing to control the color selection?  What system is it connecting to?
 
 ## Slide 10
 Warm Up

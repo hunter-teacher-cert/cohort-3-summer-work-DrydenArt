@@ -3,6 +3,7 @@
 * Digital Media Arts, Foundation Level Art Course
 * Grades 9 - 12, predominantly 9th and 10 graders
 * Class Duration: 38 minutes :hankey:
+* Acknowledgements and Gratitude: [[see document]](resources_acknowledgements.md)
 
 ## Pedagogical Techniques
 * Unplugged activities / Silent, independent thinking / Small group / 
@@ -57,5 +58,5 @@ function draw() {
   * Students open the p5.js interface on their own devices and work collaboratively to make changes and to experiment with the code. 
   * Deliverable:
     * Create a program that establishes a canvas  500 pixels in height and 700 pixels in width.
-    * Comments in the code should reflect their understanding of which argument controls which.
-    * **Challenge:** create a background that is purple (instead of the default gray). 
+    * Comments in the code should reflect their understanding of which number controls which measurement.
+    * **Challenge:** create a background that is purple (instead of the default gray). Question:  What are you doing to control the color selection?  What system is it connecting to?
