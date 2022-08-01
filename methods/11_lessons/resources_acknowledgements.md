@@ -19,7 +19,9 @@ An enormous thank you to the following teachers who so generously shared ideas a
   * Her students' websites: https://cs-and-coding-spring-2022-6a.katemaschmeyer.repl.co/
   * Her outstanding Desmos site (just...wow!): https://teacher.desmos.com/collection/602fed4058b0f132804a9aa1
     * https://teacher.desmos.com/activitybuilder/custom/6236004206617b0e6899f24a?collections=602fed4058b0f132804a9aa1
-  * Resources shared: https://cs4all-icm.gitbook.io/introduction-to-computational-media-curriculum/
+  * Resources shared:
+    * https://cs4all-icm.gitbook.io/introduction-to-computational-media-curriculum/
+    * Replit teams for education: https://replit.com/site/teams-for-education
 
 ## Other helpful resources I used: 
 * P5.js Website:
